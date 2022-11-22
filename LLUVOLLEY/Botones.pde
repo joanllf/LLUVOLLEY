@@ -32,7 +32,6 @@ void setButtonsInicio(){
 }
 
 void displayButtonsInicio(){
-  setButtonsInicio();
   sRot.display();
   rRot.display();
   dib.display();

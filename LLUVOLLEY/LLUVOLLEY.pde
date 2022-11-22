@@ -1,7 +1,10 @@
+enum PANTALLA {};
+
 void setup(){
   fullScreen();
   setMedias();
   setColors();
+  setButtonsInicio();
 }
 
 void draw(){
@@ -9,14 +12,4 @@ void draw(){
   displayLogo(width - logoH - marginH, marginV, logoW, logoH);
   
   dibujaInicio();
-}
-
-void mousePressed(){
-  eMar.isPressed();
-  player.isPressed();
-}
-
-void keyPressed(){
-  eMar.keyPressed(key, (int)keyCode);
-  player.keyPressed(key, (int)keyCode);
 }

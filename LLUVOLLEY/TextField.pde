@@ -39,7 +39,7 @@ class TextField {
       
       fill(fgColor);
       textSize(textSize);
-      text(text, x + 5, y + textSize);
+      text(text, x + 20, y + 40);
      popStyle();
    }
    
