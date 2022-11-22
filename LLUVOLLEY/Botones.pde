@@ -43,3 +43,23 @@ void displayButtonsInicio(){
   eMar.display();
   player.display();
 }
+
+TextField user, pasw;
+Button creaC, cambC, logIn;
+
+void setButtonsLogIn(){
+  user = new TextField(width/2 - 190, height/2 + 20, 380, 40);
+  pasw = new TextField(width/2 - 190, height/2 + 110, 380, 40);
+  
+  creaC = new Button("Crear cuenta", width/2 - 190, height/2 + 180, 185, 40);
+  cambC = new Button("Cambiar contraseña", width/2 + 5, height/2 + 180, 185, 40);
+  logIn = new Button("Log In", width/2 -100, height/2 + 235, 200, 50);
+}
+
+void displayButtonsLogIn(){
+  user.display();
+  pasw.display();
+  creaC.display();
+  cambC.display();
+  logIn.display();
+}

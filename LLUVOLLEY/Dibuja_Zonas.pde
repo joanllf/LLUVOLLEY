@@ -14,8 +14,8 @@ void dibujaPista(){
 }
 
 void dibujaMarcador(){
-  rect(2 * marginH + pistaW, 2 * marginV + logoH, marcadorW, marcadorH);
   fill(getColorAt(0), 230);
+  rect(2 * marginH + pistaW, 2 * marginV + logoH, marcadorW, marcadorH);
 }
 
 void dibujaFletchas(){
