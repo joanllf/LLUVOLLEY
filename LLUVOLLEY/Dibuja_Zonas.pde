@@ -1,10 +1,3 @@
-void dibujaInicio(){
-  dibujaPista();
-  dibujaMarcador();
-  displayButtonsInicio();
-  dibujaFletchas();
-}
-
 void dibujaPista(){
   pushStyle();
     strokeWeight(2);

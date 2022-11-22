@@ -2,17 +2,20 @@
   
 // Array de tipografies
 PFont[] fonts;
+
+// URL de la carpeta on hi ha les imatges
+String URL_FONT = "fonts/";
   
 // Estableix les fonts de l'App
 void setFonts(){
     this.fonts = new PFont[7];
-    this.fonts[0] = createFont("Montserrat-Regular.ttf", midaTitol);
-    this.fonts[1] = createFont("Montserrat-Bold.ttf", midaTitol);
-    this.fonts[2] = createFont("Hack-Regular.ttf", midaSubtitol);
-    this.fonts[3] = createFont("Hack-Bold.ttf", midaTitol);
-    this.fonts[4] = createFont("Hack-Italic.ttf", midaTitol);
-    this.fonts[5] = createFont("Hack-BoldItalic.ttf", midaTitol);
-    this.fonts[6] = createFont("BebasNeue-Regular.ttf", midaParagraf);
+    this.fonts[0] = createFont(URL_FONT + "Montserrat-Regular.ttf", midaTitol);
+    this.fonts[1] = createFont(URL_FONT + "Montserrat-Bold.ttf", midaTitol);
+    this.fonts[2] = createFont(URL_FONT + "Hack-Regular.ttf", midaSubtitol);
+    this.fonts[3] = createFont(URL_FONT + "Hack-Bold.ttf", midaTitol);
+    this.fonts[4] = createFont(URL_FONT + "Hack-Italic.ttf", midaTitol);
+    this.fonts[5] = createFont(URL_FONT + "Hack-BoldItalic.ttf", midaTitol);
+    this.fonts[6] = createFont(URL_FONT + "BebasNeue-Regular.ttf", midaParagraf);
 }
   
   // Getter del número de fonts

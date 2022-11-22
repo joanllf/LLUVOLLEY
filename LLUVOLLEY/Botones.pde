@@ -4,7 +4,7 @@
 Button sRot, rRot, dib, bor, jug, rotPre, est;
 TextField eMar, player;
 
-void setButtonsInicio(){
+void setButtonsInicio(){  
   // Botones bajo la pista
   sRot   = new Button("+ ROTACIÓN",               marginH,               2 * marginV + pistaH,                             rotW, rotH);
   rRot   = new Button("- ROTACIÓN",               marginH,               3 * marginV + pistaH + rotH,                      rotW, rotH);
