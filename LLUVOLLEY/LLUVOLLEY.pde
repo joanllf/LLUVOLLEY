@@ -7,11 +7,13 @@ void setup(){
   setFonts();
   setButtonsInicio();
   setButtonsLogIn();
+  
+  textFont(getFontAt(0));
 }
 
 void draw(){
   displayFondo(0, 0, width, height);
   
   //dibujaInicio();
-  dibujaLogIn();
+  //dibujaLogIn();
 }

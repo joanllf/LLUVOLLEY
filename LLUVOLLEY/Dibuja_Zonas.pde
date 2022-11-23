@@ -14,8 +14,10 @@ void dibujaPista(){
 }
 
 void dibujaMarcador(){
-  fill(getColorAt(0), 230);
+  pushStyle();
+  fill(getColorAt(0), 220);
   rect(2 * marginH + pistaW, 2 * marginV + logoH, marcadorW, marcadorH);
+  popStyle();
 }
 
 void dibujaFletchas(){
@@ -30,4 +32,14 @@ void dibujaFletchas(){
     rotate(-PI/2);
     displayIcon(12, -89, 40, 40);
   popMatrix();
+}
+
+void dibujaTextoLogIn(){
+  pushStyle();
+    textFont(getFontAt(1));
+    textSize(24);
+    fill(0);
+    text("Usuario:", width/2 - 190, height/2 + 10);
+    text("Contraseña:", width/2 - 190, height/2 + 100);
+  popStyle();
 }
