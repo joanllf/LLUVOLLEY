@@ -12,6 +12,8 @@ class Button {
  String textBoto;  // Text
  boolean enabled;  // Abilitat / desabilitat
  
+ int textS;
+ 
  // Mètode Constructor
  Button(String text, float x, float y, float w, float h){
    this.textBoto = text;
@@ -20,6 +22,7 @@ class Button {
    this.w = w;
    this.h = h;
    this.enabled = true;
+   this.textS = 20;
    fillColor = getColorAt(4);
    fillColorOver = getColorAt(5);
    fillColorDisabled = getColorAt(6);
@@ -40,6 +43,10 @@ class Button {
    this.fillColorOver = c;
  }
  
+ void setTextSize(int t){
+   this.textS = t;
+ }
+ 
  // Dibuixa el botó
  void display(){
    pushStyle();
@@ -56,7 +63,7 @@ class Button {
    rect(this.x, this.y, this.w, this.h);        // Rectangle del botó
    
    // Text (color, alineació i mida)
-   fill(0); textAlign(CENTER); textSize(20);
+   fill(0); textAlign(CENTER); textSize(textS);
    text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
    popStyle();
  }

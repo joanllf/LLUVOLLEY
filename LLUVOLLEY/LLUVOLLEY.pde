@@ -1,4 +1,4 @@
-enum PANTALLA {LOGIN, REGISTER, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTGLOBALES, ESTPARTIDO};
+enum PANTALLA {LOGIN, SINGIN, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTGLOBALES, ESTPARTIDO};
 
 void setup(){
   fullScreen();
@@ -7,6 +7,7 @@ void setup(){
   setFonts();
   setButtonsInicio();
   setButtonsLogIn();
+  setButtonsSingIn();
   
   textFont(getFontAt(0));
 }
@@ -14,6 +15,8 @@ void setup(){
 void draw(){
   displayFondo(0, 0, width, height);
   
-  //dibujaInicio();
   //dibujaLogIn();
+  //dibujaSingIn();
+  dibujaSelectTeam();
+  //dibujaInicio();
 }

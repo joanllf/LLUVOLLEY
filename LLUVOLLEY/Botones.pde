@@ -39,11 +39,14 @@ void displayButtonsInicio(){
   jug.display();
   rotPre.display();
   est.display();
-  
+  jug.setTextSize(24);
+  rotPre.setTextSize(24);
+  est.setTextSize(24);
   eMar.display();
   player.display();
 }
 
+// Botones de la pantalla de Lon In
 TextField user, pasw;
 Button creaC, cambC, logIn;
 
@@ -59,7 +62,32 @@ void setButtonsLogIn(){
 void displayButtonsLogIn(){
   user.display();
   pasw.display();
+  creaC.setTextSize(14);
+  cambC.setTextSize(14);
   creaC.display();
   cambC.display();
   logIn.display();
+}
+
+//Botones de la pantalla de Register
+TextField userR, paswR, repPasw, club, email;
+Button cont;
+
+void setButtonsSingIn(){
+  userR = new TextField(width/2 - 190, height/2 + 10, 380, 30);
+  paswR = new TextField(width/2 - 190, height/2 + 80, 380, 30);
+  repPasw = new TextField(width/2 - 190, height/2 + 150, 380, 30);
+  club = new TextField(width/2 - 190, height/2 + 220, 380, 30);
+  email = new TextField(width/2 - 190, height/2 + 290, 380, 30);
+  
+  cont = new Button("Continuar", width/2 -100, height/2 + 335, 200, 50);
+}
+
+void displayButtonsSingIn(){
+  userR.display();
+  paswR.display();
+  repPasw.display();
+  club.display();
+  email.display();
+  cont.display();
 }
