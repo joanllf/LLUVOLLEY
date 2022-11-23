@@ -91,3 +91,22 @@ void displayButtonsSingIn(){
   email.display();
   cont.display();
 }
+
+// Botones de la pantalla de select team
+Select equipo;
+String[] selectTeam = {"Alevin", "Infantil", "Cadete"};
+
+Button addTeam;
+
+void setButtonsSelectTeam(){
+  equipo = new Select(selectTeam, width/2 - 300, height/2, 600, 80);
+  addTeam = new Button("Añadir equipo", width/2 + 100, height/2 + 100, 200, 50);
+}
+
+void displayButtonsSelectTeam(){
+  
+  addTeam.setColor(getColorAt(1));
+  addTeam.setColorOver(getColorAt(2));
+  addTeam.display();
+  equipo.display();
+}
