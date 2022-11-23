@@ -56,3 +56,14 @@ void dibujaTextoSingIn(){
     text("Club:", width/2 - 190, height/2 + 285);
   popStyle();
 }
+
+void dibujaTextoAddTeam(){
+  pushStyle();
+    textFont(getFontAt(1));
+    textSize(18);
+    fill(0);
+    text("Usuario:", width/2 - 190, height/2 + 5);
+    text("Contraseña:", width/2 - 190, height/2 + 75);
+    text("Categoría:", width/2 - 190, height/2 + 145);
+  popStyle();
+}

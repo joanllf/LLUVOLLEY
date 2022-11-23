@@ -104,9 +104,26 @@ void setButtonsSelectTeam(){
 }
 
 void displayButtonsSelectTeam(){
-  
   addTeam.setColor(getColorAt(1));
   addTeam.setColorOver(getColorAt(2));
   addTeam.display();
   equipo.display();
+}
+
+// Botones de la pantalla de add team
+TextField userT, paswT, categ;
+Button conf;
+
+void setButtonsAddTeam(){
+  userT = new TextField(width/2 - 190, height/2 + 10, 380, 30);
+  paswT = new TextField(width/2 - 190, height/2 + 80, 380, 30);
+  categ = new TextField(width/2 - 190, height/2 + 150, 380, 30);
+  conf = new Button("Confirmar", width/2 + 10 , height/2 + 210, 180, 50);
+}
+
+void displayButtonsAddTeam(){
+  userT.display();
+  paswT.display();
+  categ.display();
+  conf.display();
 }

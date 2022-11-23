@@ -9,6 +9,7 @@ void setup(){
   setButtonsLogIn();
   setButtonsSingIn();
   setButtonsSelectTeam();
+  setButtonsAddTeam();
   
   textFont(getFontAt(0));
 }
@@ -19,5 +20,6 @@ void draw(){
   //dibujaLogIn();
   //dibujaSingIn();
   //dibujaSelectTeam();
+  //dibujaAddTeam();
   //dibujaInicio();
 }
