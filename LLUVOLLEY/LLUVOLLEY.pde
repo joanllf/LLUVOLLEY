@@ -21,5 +21,5 @@ void draw(){
   //dibujaSingIn();
   //dibujaSelectTeam();
   //dibujaAddTeam();
-  //dibujaInicio();
+  dibujaInicio();
 }

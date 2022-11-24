@@ -32,6 +32,10 @@ void setButtonsInicio(){
 }
 
 void displayButtonsInicio(){
+  eMar.changeY(40);
+  player.changeY(35);
+  player.changeX(15);
+  
   sRot.display();
   rRot.display();
   dib.display();
@@ -84,6 +88,12 @@ void setButtonsSingIn(){
 }
 
 void displayButtonsSingIn(){
+  userR.changeY(23);
+  paswR.changeY(23);
+  repPasw.changeY(23);
+  club.changeY(23);
+  email.changeY(23);
+
   userR.display();
   paswR.display();
   repPasw.display();
@@ -122,6 +132,10 @@ void setButtonsAddTeam(){
 }
 
 void displayButtonsAddTeam(){
+  userT.changeY(23);
+  paswT.changeY(23);
+  categ.changeY(23);
+  
   userT.display();
   paswT.display();
   categ.display();

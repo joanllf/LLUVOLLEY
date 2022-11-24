@@ -4,6 +4,8 @@ class TextField {
   
   // Propietats del camp de text
   float x, y, h, w;
+  float startX = 20, 
+        startY = 30;
   
   // Colors
   color bgColor = getColorAt(4);
@@ -39,8 +41,16 @@ class TextField {
       
       fill(fgColor);
       textSize(textSize);
-      text(text, x + 20, y + 30);
+      text(text, x + startX, y + startY);
      popStyle();
+   }
+   
+   void changeX(float x){
+     this.startX = x;
+   }
+   
+   void changeY(float y){
+     this.startY = y;
    }
    
    // Afegeix, lleva el text que es tecleja
