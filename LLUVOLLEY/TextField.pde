@@ -53,6 +53,10 @@ class TextField {
      this.startY = y;
    }
    
+   void setTextSize(int t){
+     this.textSize = t;
+   }
+   
    // Afegeix, lleva el text que es tecleja
    void keyPressed(char key, int keyCode) {
       if (selected) {
@@ -75,7 +79,7 @@ class TextField {
    
    // Afegeix la lletra c al final del text
    void addText(char c) {
-      if (textWidth(this.text + c) < w) {
+      if (textWidth(this.text + c) < 2*w) {
          this.text += c;
          textLength++;
       }

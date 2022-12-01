@@ -15,7 +15,7 @@ void setFonts(){
     this.fonts[3] = createFont(URL_FONT + "Hack-Bold.ttf", midaTitol);
     this.fonts[4] = createFont(URL_FONT + "Hack-Italic.ttf", midaTitol);
     this.fonts[5] = createFont(URL_FONT + "Hack-BoldItalic.ttf", midaTitol);
-    this.fonts[6] = createFont(URL_FONT + "BebasNeue-Regular.ttf", midaParagraf);
+    this.fonts[6] = createFont(URL_FONT + "BebasNeue-Regular.ttf", midaTextField); //monospace
 }
   
   // Getter del número de fonts
@@ -60,16 +60,3 @@ void setFonts(){
   PFont getFontAt(int i){
     return this.fonts[i];
   }
-  
-  /*
-  // Dibuixa les font de l'App
-  void displayFonts(float x, float y, float h){
-    pushStyle();     
-      for(int i=0; i<getNumFonts(); i++){
-        fill(0); stroke(0); strokeWeight(3);
-        textFont(getFontAt(i));
-        text("Tipografia "+i, x, y + i*h);
-      }
-    popStyle();
-  }
-  */

@@ -46,8 +46,15 @@ void displayButtonsInicio(){
   jug.setTextSize(24);
   rotPre.setTextSize(24);
   est.setTextSize(24);
-  eMar.display();
-  player.display();
+  pushStyle();
+    textFont(getFontAt(6));
+    eMar.changeY(41);
+    player.changeY(37);
+    eMar.setTextSize(30);
+    player.setTextSize(30);
+    eMar.display();
+    player.display();
+  popStyle();
 }
 
 // Botones de la pantalla de Lon In
