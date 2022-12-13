@@ -4,6 +4,8 @@ void mousePressed(){
   user.isPressed();
   pasw.isPressed();
   
+  logIn.isPressed();
+  
   // Botones de la pantalla de sing in
   userR.isPressed();
   paswR.isPressed();

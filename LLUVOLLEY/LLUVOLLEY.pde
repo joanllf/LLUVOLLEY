@@ -1,5 +1,3 @@
-enum PANTALLA {LOGIN, SINGIN, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTGLOBALES, ESTPARTIDO};
-
 void setup(){
   fullScreen();
   setMedias();
@@ -17,9 +15,7 @@ void setup(){
 void draw(){
   displayFondo(0, 0, width, height);
   
-  //dibujaLogIn();
-  //dibujaSingIn();
-  //dibujaSelectTeam();
-  //dibujaAddTeam();
+  
   dibujaInicio();
+  //selectPantalla();
 }
