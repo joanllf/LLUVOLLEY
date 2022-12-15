@@ -11,6 +11,16 @@ void dibujaPista(){
       line(600, 0, 600, 900);
     popMatrix();
   popStyle();
+  
+  pushStyle();
+    fill(getColorAt(5), 200);
+    text("1", 30, 70);
+    text("6", 330, 70);
+    text("5", 630, 70);
+    text("2", 30, 670);
+    text("3", 330, 670);
+    text("4", 630, 670);
+  popStyle();
 }
 
 void dibujaMarcador(){

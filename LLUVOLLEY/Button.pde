@@ -11,7 +11,6 @@ class Button {
  
  String textBoto;  // Text
  boolean enabled;  // Abilitat / desabilitat
- boolean selected = false;
  
  int textS;
  
@@ -67,14 +66,6 @@ class Button {
    fill(0); textAlign(CENTER); textSize(textS);
    text(textBoto, this.x + this.w/2, this.y + this.h/2 + 10);
    popStyle();
- }
- 
- void isPressed(){
-   if (mouseOverButton()) {
-       selected = true;
-    } else {
-       selected = false;
-    }
  }
  
  // Indica si el cursor està sobre el botó
