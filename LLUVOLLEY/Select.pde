@@ -23,7 +23,7 @@ class Select {
   
   void display(){
     pushStyle();
-    stroke(0); strokeWeight(1); fill(getColorAt(1));
+    stroke(0); strokeWeight(1); fill(getColorAt(4));
     rect(x, y, w, h);
     
     textFont(getFontAt(1));

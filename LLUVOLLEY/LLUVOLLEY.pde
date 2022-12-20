@@ -14,13 +14,11 @@ void setup(){
   setButtonsAddTeam();
   
   textFont(getFontAt(0));
-  
-  
 }
 
 void draw(){
   displayFondo(0, 0, width, height);
-  //dibujaInicio();
+
   switch(p){
     case LOGIN: dibujaLogIn(); break;
     case SINGIN: dibujaSingIn(); break;

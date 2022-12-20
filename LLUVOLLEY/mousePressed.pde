@@ -27,6 +27,14 @@ void mousePressed() {
     p = PANTALLA.SELECTTEAM;
   } else if(addTeam.mouseOverButton()){
     p = PANTALLA.ADDTEAM;
+  } else if(conf.mouseOverButton()){
+    p = PANTALLA.SELECTTEAM;
+  } else if(creaC.mouseOverButton()){
+    p = PANTALLA.SINGIN;
+  } else if(cont.mouseOverButton()){
+    p = PANTALLA.LOGIN;
+  } else if(confST.mouseOverButton()){
+    p = PANTALLA.INICIO;
   }
   
   

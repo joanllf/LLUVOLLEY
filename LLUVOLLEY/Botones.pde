@@ -111,19 +111,21 @@ void displayButtonsSingIn(){
 
 // Botones de la pantalla de select team
 Select equipo;
-String[] selectTeam = {"Alevin", "Infantil", "Cadete"};
+String[] selectTeam = {"Alevin", "Infantil", "Cadete", "Juvenil"};
 
-Button addTeam;
+Button addTeam, confST;
 
 void setButtonsSelectTeam(){
-  equipo = new Select(selectTeam, width/2 - 300, height/2, 600, 80);
-  addTeam = new Button("Añadir equipo", width/2 + 100, height/2 + 100, 200, 50);
+  equipo = new Select(selectTeam, width/2 - 300, height/2 - 25, 600, 80);
+  addTeam = new Button("Añadir equipo", width/2 - 300 , height/2 + 70, 200, 70);
+  confST = new Button("Confirmar", width/2 + 100, height/2 + 70, 200, 70);
 }
 
 void displayButtonsSelectTeam(){
-  addTeam.setColor(getColorAt(1));
-  addTeam.setColorOver(getColorAt(2));
+  addTeam.setColor(getColorAt(4));
+  addTeam.setColorOver(getColorAt(5));
   addTeam.display();
+  confST.display();
   equipo.display();
 }
 

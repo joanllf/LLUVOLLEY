@@ -23,7 +23,7 @@ void dibujaSingIn(){
 void dibujaSelectTeam(){
   pushStyle();
     noStroke();
-    fill(getColorAt(4), 200);
+    fill(getColorAt(6), 200);
     rect(width/2 - 350, height/2 - 130, 700, 300);
   popStyle();
   displayLogo(width - logoH - marginH, marginV, logoW, logoH);
