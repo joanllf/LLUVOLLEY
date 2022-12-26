@@ -1,8 +1,7 @@
 void mousePressed() {
+  //LOGIN
   if (p==PANTALLA.LOGIN) {
     // Botones de la pantalla log in
-    eMar.isPressed();
-    player.isPressed();
     user.isPressed();
     pasw.isPressed();
 
@@ -11,6 +10,8 @@ void mousePressed() {
     } else if (logIn.mouseOverButton()) {
       p = PANTALLA.SELECTTEAM;
     }
+
+    //SINGIN
   } else if (p == PANTALLA.SINGIN) {
     // Botones de la pantalla de sing in
     userR.isPressed();
@@ -22,6 +23,8 @@ void mousePressed() {
     if (cont.mouseOverButton()) {
       p = PANTALLA.LOGIN;
     }
+
+    //SELECTTEAM
   } else if (p == PANTALLA.SELECTTEAM) {
 
     if (equipo.mouseOverSelect() && equipo.enabled) {
@@ -34,6 +37,8 @@ void mousePressed() {
     } else if (confST.mouseOverButton()) {
       p = PANTALLA.INICIO;
     }
+
+    //ADDTEAM
   } else if (p == PANTALLA.ADDTEAM) {
     // Botones de la pantalla de add team
     userT.isPressed();
@@ -43,28 +48,30 @@ void mousePressed() {
     if (conf.mouseOverButton()) {
       p = PANTALLA.SELECTTEAM;
     }
+
+    //INICIO
   } else if (p == PANTALLA.INICIO) {
+    eMar.isPressed();
+    player.isPressed();
+    if (jug.mouseOverButton()) {
+      p = PANTALLA.JUGADORES;
+    }
+
+    //JUGADORES
   } else if (p == PANTALLA.JUGADORES) {
+    if (prev.mouseOverButton() && prev.enabled) {
+      t.prevPage();
+    } else if (next.mouseOverButton() && next.enabled) {
+      t.nextPage();
+    }
+    
+    //ROTACIONES
   } else if (p == PANTALLA.ROTACIONES) {
+    
+    //ESTGLOBALES
   } else if (p == PANTALLA.ESTGLOBALES) {
+    
+    //ESTPARTIDO
   } else if (p == PANTALLA.ESTPARTIDO) {
   }
-
-
-
-  /*
-  if(logIn.mouseOverButton()){
-   p = PANTALLA.SELECTTEAM;
-   } else if(addTeam.mouseOverButton()){
-   p = PANTALLA.ADDTEAM;
-   } else if(conf.mouseOverButton()){
-   p = PANTALLA.SELECTTEAM;
-   } else if(creaC.mouseOverButton()){
-   p = PANTALLA.SINGIN;
-   } else if(cont.mouseOverButton()){
-   p = PANTALLA.LOGIN;
-   } else if(confST.mouseOverButton()){
-   p = PANTALLA.INICIO;
-   }
-   */
 }

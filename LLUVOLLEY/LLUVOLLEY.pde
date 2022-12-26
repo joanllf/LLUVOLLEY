@@ -1,6 +1,8 @@
 enum PANTALLA {LOGIN, SINGIN, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTGLOBALES, ESTPARTIDO};
 
-PANTALLA p = PANTALLA.LOGIN;
+//PANTALLA p = PANTALLA.LOGIN;
+PANTALLA p = PANTALLA.JUGADORES;
+
 
 void setup(){
   fullScreen();
@@ -12,6 +14,7 @@ void setup(){
   setButtonsSingIn();
   setButtonsSelectTeam();
   setButtonsAddTeam();
+  setButtonsJugadores();
   
   textFont(getFontAt(0));
 }
@@ -25,9 +28,21 @@ void draw(){
     case SELECTTEAM: dibujaSelectTeam(); break;
     case ADDTEAM: dibujaAddTeam(); break;
     case INICIO: dibujaInicio(); break;
-    case JUGADORES:; break;
+    case JUGADORES: dibujaJugadores(); break;
     case ROTACIONES:; break;
     case ESTGLOBALES:; break;
     case ESTPARTIDO:; break;
   }
+}
+
+void updateCursor(){
+  
+  if((prev.mouseOverButton() && prev.enabled)||
+     (next.mouseOverButton() && next.enabled)){
+      cursor(HAND);
+  }
+  else {
+     cursor(ARROW);
+  }
+  
 }

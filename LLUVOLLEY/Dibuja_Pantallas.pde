@@ -48,3 +48,8 @@ void dibujaInicio(){
   displayButtonsInicio();
   dibujaFletchas();
 }
+
+void dibujaJugadores(){
+  displayLogo(width - logoH - marginH, marginV, logoW, logoH);
+  displayButtonsJugadores();
+}
