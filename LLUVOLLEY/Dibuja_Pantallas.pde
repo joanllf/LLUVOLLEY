@@ -42,7 +42,7 @@ void dibujaAddTeam(){
 }
 
 void dibujaInicio(){
-  displayLogo(width - logoH - marginH, marginV, logoW, logoH);
+  //displayLogo(width - logoH - marginH, marginV, logoW, logoH);
   dibujaPista();
   dibujaMarcador();
   displayButtonsInicio();
@@ -50,6 +50,6 @@ void dibujaInicio(){
 }
 
 void dibujaJugadores(){
-  displayLogo(width - logoH - marginH, marginV, logoW, logoH);
+  //displayLogo(width - logoH - marginH, marginV, logoW, logoH);
   displayButtonsJugadores();
 }

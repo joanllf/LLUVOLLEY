@@ -55,6 +55,8 @@ void mousePressed() {
     player.isPressed();
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
+    } else if (logo.mouseOverButton()) {
+      p = PANTALLA.LOGIN;
     }
 
     //JUGADORES
@@ -63,14 +65,16 @@ void mousePressed() {
       t.prevPage();
     } else if (next.mouseOverButton() && next.enabled) {
       t.nextPage();
+    } else if (logo.mouseOverButton()) {
+      p = PANTALLA.INICIO;
     }
-    
+
     //ROTACIONES
   } else if (p == PANTALLA.ROTACIONES) {
-    
+
     //ESTGLOBALES
   } else if (p == PANTALLA.ESTGLOBALES) {
-    
+
     //ESTPARTIDO
   } else if (p == PANTALLA.ESTPARTIDO) {
   }

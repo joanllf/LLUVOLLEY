@@ -3,6 +3,7 @@
 // Botones de la pantalla inicial
 Button sRot, rRot, dib, bor, jug, rotPre, est;
 TextField eMar, player;
+ImageButton logo;
 
 void setButtonsInicio() {
   // Botones bajo la pista
@@ -29,6 +30,7 @@ void setButtonsInicio() {
 
   // Selector de jugador de la pista
   player = new TextField(2 * marginH + 2 * rotW + 135, marginV + pistaH + 55, 50, 50);
+  logo = new ImageButton(getImgAt(0), width - logoH - marginH, marginV, logoW, logoH);
 }
 
 void displayButtonsInicio() {
@@ -55,6 +57,7 @@ void displayButtonsInicio() {
   eMar.display();
   player.display();
   popStyle();
+  logo.display();
 }
 
 // Botones de la pantalla de Lon In
@@ -185,4 +188,5 @@ void displayButtonsJugadores() {
   next.display();
   prev.display();
   updateCursor();
+  logo.display();
 }
