@@ -53,3 +53,7 @@ void dibujaJugadores(){
   //displayLogo(width - logoH - marginH, marginV, logoW, logoH);
   displayButtonsJugadores();
 }
+
+void dibujaRotPred(){
+  displayButtonsRotaciones();
+}

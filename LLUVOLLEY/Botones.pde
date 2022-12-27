@@ -190,3 +190,7 @@ void displayButtonsJugadores() {
   updateCursor();
   logo.display();
 }
+
+void displayButtonsRotaciones() {
+  logo.display();
+}

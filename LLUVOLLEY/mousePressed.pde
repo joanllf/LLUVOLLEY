@@ -57,6 +57,8 @@ void mousePressed() {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {
       p = PANTALLA.LOGIN;
+    } else if (rotPre.mouseOverButton()) {
+      p = PANTALLA.ROTACIONES;
     }
 
     //JUGADORES
@@ -71,6 +73,9 @@ void mousePressed() {
 
     //ROTACIONES
   } else if (p == PANTALLA.ROTACIONES) {
+    if (logo.mouseOverButton()) {
+      p = PANTALLA.INICIO;
+    }
 
     //ESTGLOBALES
   } else if (p == PANTALLA.ESTGLOBALES) {
