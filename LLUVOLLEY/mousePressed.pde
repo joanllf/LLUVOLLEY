@@ -36,6 +36,8 @@ void mousePressed() {
       p = PANTALLA.ADDTEAM;
     } else if (confST.mouseOverButton()) {
       p = PANTALLA.INICIO;
+    } else if (logo.mouseOverButton()) {
+      p = PANTALLA.LOGIN;
     }
 
     //ADDTEAM
@@ -56,7 +58,7 @@ void mousePressed() {
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {
-      p = PANTALLA.LOGIN;
+      p = PANTALLA.SELECTTEAM;
     } else if (rotPre.mouseOverButton()) {
       p = PANTALLA.ROTACIONES;
     } else if (est.mouseOverButton()) {

@@ -130,6 +130,7 @@ void displayButtonsSelectTeam() {
   addTeam.display();
   confST.display();
   equipo.display();
+  logo.display();
 }
 
 // Botones de la pantalla de add team
