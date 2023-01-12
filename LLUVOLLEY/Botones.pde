@@ -197,12 +197,12 @@ void displayButtonsRotaciones() {
 
 Button glob, part;
 
-void setButtonsEstI(){
+void setButtonsEstI() {
   glob = new Button("Estadíscas \n" + "globales", width/5, height/5, width/5, 3*height/5);
   part = new Button("Estadíscas \n" + "último partido", 3*width/5, height/5, width/5, 3*height/5);
 }
 
-void displayButtonsEstI(){
+void displayButtonsEstI() {
   glob.setTextSize(32);
   part.setTextSize(32);
   glob.display();
@@ -210,10 +210,10 @@ void displayButtonsEstI(){
   logo.display();
 }
 
-void displayButtonsEstG(){
+void displayButtonsEstG() {
   logo.display();
 }
 
-void displayButtonsEstP(){
+void displayButtonsEstP() {
   logo.display();
 }

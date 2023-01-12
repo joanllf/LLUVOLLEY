@@ -77,3 +77,15 @@ void dibujaTextoAddTeam(){
     text("Categoría:", width/2 - 190, height/2 + 145);
   popStyle();
 }
+
+void dibujaRotPre(){
+  pushStyle();
+    rect(width/13, height/11, 3*width/13, 3*width/13);
+    rect(5*width/13, height/11, 3*width/13, 3*width/13);
+    rect(9*width/13, height/11, 3*width/13, 3*width/13);
+    
+    rect(width/13, 6*height/11, 3*width/13, 3*width/13);
+    rect(5*width/13, 6*height/11, 3*width/13, 3*width/13);
+    rect(9*width/13, 6*height/11, 3*width/13, 3*width/13);
+  popStyle();
+}
