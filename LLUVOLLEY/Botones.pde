@@ -194,3 +194,26 @@ void displayButtonsJugadores() {
 void displayButtonsRotaciones() {
   logo.display();
 }
+
+Button glob, part;
+
+void setButtonsEstI(){
+  glob = new Button("Estadíscas \n" + "globales", width/5, height/5, width/5, 3*height/5);
+  part = new Button("Estadíscas \n" + "último partido", 3*width/5, height/5, width/5, 3*height/5);
+}
+
+void displayButtonsEstI(){
+  glob.setTextSize(32);
+  part.setTextSize(32);
+  glob.display();
+  part.display();
+  logo.display();
+}
+
+void displayButtonsEstG(){
+  logo.display();
+}
+
+void displayButtonsEstP(){
+  logo.display();
+}

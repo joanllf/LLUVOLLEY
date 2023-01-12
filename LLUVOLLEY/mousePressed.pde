@@ -59,6 +59,8 @@ void mousePressed() {
       p = PANTALLA.LOGIN;
     } else if (rotPre.mouseOverButton()) {
       p = PANTALLA.ROTACIONES;
+    } else if (est.mouseOverButton()) {
+      p = PANTALLA.ESTINICIO;
     }
 
     //JUGADORES
@@ -76,11 +78,28 @@ void mousePressed() {
     if (logo.mouseOverButton()) {
       p = PANTALLA.INICIO;
     }
+    
+    //ESTINICIO
+  } else if (p == PANTALLA.ESTINICIO) {
+    if (logo.mouseOverButton()) {
+      p = PANTALLA.INICIO;
+    } else if (glob.mouseOverButton()) {
+      p = PANTALLA.ESTGLOBALES;
+    } else if (part.mouseOverButton()) {
+      p = PANTALLA.ESTPARTIDO;
+    }
 
     //ESTGLOBALES
   } else if (p == PANTALLA.ESTGLOBALES) {
+    if (logo.mouseOverButton()) {
+      p = PANTALLA.ESTINICIO;
+    }
 
     //ESTPARTIDO
   } else if (p == PANTALLA.ESTPARTIDO) {
+    if (logo.mouseOverButton()) {
+      p = PANTALLA.ESTINICIO;
+    }
+    
   }
 }

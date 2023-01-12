@@ -57,3 +57,7 @@ void dibujaJugadores(){
 void dibujaRotPred(){
   displayButtonsRotaciones();
 }
+
+void dibujaEstI(){
+  displayButtonsEstI();
+}
