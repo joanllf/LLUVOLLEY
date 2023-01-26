@@ -1,9 +1,9 @@
-// Classe Botó
+// Clase Botón
 
 class Button {
 
-  // Propietats d'un botó:
-  float x, y, w, h;  // Posició i dimensions
+  // Propiedades de un botón:
+  float x, y, w, h;  // Posición y dimensiones
 
   // Colors de contorn, farciment, actiu i desactiu
   color fillColor, strokeColor;
