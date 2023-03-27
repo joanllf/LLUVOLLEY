@@ -2,7 +2,7 @@ void mousePressed() {
   //LOGIN
   if (p==PANTALLA.LOGIN) {
     // Botones de la pantalla log in
-    user.isPressed();
+    usuario.isPressed();
     pasw.isPressed();
 
     if (creaC.mouseOverButton()) {

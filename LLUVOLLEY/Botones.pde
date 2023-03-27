@@ -61,11 +61,11 @@ void displayButtonsInicio() {
 }
 
 // Botones de la pantalla de Lon In
-TextField user, pasw;
+TextField usuario, pasw;
 Button creaC, cambC, logIn;
 
 void setButtonsLogIn() {
-  user = new TextField(width/2 - 190, height/2 + 20, 380, 40);
+  usuario = new TextField(width/2 - 190, height/2 + 20, 380, 40);
   pasw = new TextField(width/2 - 190, height/2 + 110, 380, 40);
 
   creaC = new Button("Crear cuenta", width/2 - 190, height/2 + 180, 185, 40);
@@ -74,7 +74,7 @@ void setButtonsLogIn() {
 }
 
 void displayButtonsLogIn() {
-  user.display();
+  usuario.display();
   pasw.display();
   creaC.setTextSize(14);
   cambC.setTextSize(14);
