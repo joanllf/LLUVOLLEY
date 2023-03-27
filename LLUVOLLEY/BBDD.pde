@@ -20,8 +20,50 @@ void conexionBBDD(){
     }
 }
 
-void insertInfoTaula(String id, String nom) {
-  String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES ('"+id+"', '"+nom+"')";
+void insertInfoTaulaCategoria(String num, String nom){
+  String sNom = nom.replace("\'", "\\'");
+  String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES ('', '"+sNom+"')";
   println(q);
   msql.query(q);
+}
+
+// Obté el número de files de la taula
+int getNumRowsTaula(String nomTaula){
+  msql.query( "SELECT COUNT(*) AS n FROM %s", nomTaula );
+  msql.next();
+  int numRows = msql.getInt("n");
+  return numRows;
+}
+  
+// Obté informació de la taula Unitat
+String[][] getInfoTaulaUnitat(){
+  
+  int numRows = getNumRowsTaula("unitat");
+  
+  String[][] data = new String[numRows][2];
+  
+  int nr=0;
+  msql.query( "SELECT * FROM unitat" );
+  while (msql.next()){
+      data[nr][0] = String.valueOf(msql.getInt("numero"));
+      data[nr][1] = msql.getString("nom");
+      nr++;
+  }
+  return data;
+}
+
+// Obté array am camp nom de la taula Unitat
+String[] getNomsTaulaUnitat(){
+  
+  int numRows = getNumRowsTaula("unitat");
+  
+  String[] data = new String[numRows];
+  
+  int nr=0;
+  msql.query( "SELECT nom FROM unitat" );
+  while (msql.next()){
+      data[nr] = msql.getString("nom");
+      nr++;
+  }
+  return data;
 }
