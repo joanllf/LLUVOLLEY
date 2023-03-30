@@ -3,9 +3,6 @@ enum PANTALLA {
 };
 
 PANTALLA p = PANTALLA.LOGIN;
-//PANTALLA p = PANTALLA.ROTACIONES;
-//PANTALLA p = PANTALLA.ESTINICIO;
-
 
 void setup() {
   fullScreen();

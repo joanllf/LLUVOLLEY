@@ -20,9 +20,21 @@ void conexionBBDD(){
     }
 }
 
-void insertInfoTaulaCategoria(String num, String nom){
+void insertInfoTaulaCategoria(String nom){
   String sNom = nom.replace("\'", "\\'");
   String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES ('', '"+sNom+"')";
+  println(q);
+  msql.query(q);
+}
+
+void insertUsuario(String user, String pasw){
+  String q ="INSERT INTO `usuario` (`idusuario`, `pwusuario`) VALUES ('"+user+"', '"+pasw+"')";
+  println(q);
+  msql.query(q);
+}
+
+void insertJugador(String nombre, String altura, String dorsal, String edad, String posicion){
+  String q ="INSERT INTO `jugador` (`idjugador`, `nomjugador`, `altura`, `dorsal`, `edad`, `posición_idposición`, `equipo_idequipo`) VALUES (NULL, "+nombre+", '"+altura+"', '"+dorsal+"', '"+edad+"', '"+posicion+"', '')";
   println(q);
   msql.query(q);
 }
