@@ -10,6 +10,11 @@ void keyPressed() {
   repPasw.keyPressed(key, (int)keyCode);
   club.keyPressed(key, (int)keyCode);
   email.keyPressed(key, (int)keyCode);
+  
+  // Botones de la pantalla change pasword
+  userCP.keyPressed(key, (int)keyCode);
+  newPSW.keyPressed(key, (int)keyCode);
+  confPSW.keyPressed(key, (int)keyCode);  
 
   //Botones de la pantalla de add team
   userT.keyPressed(key, (int)keyCode);

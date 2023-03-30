@@ -9,6 +9,8 @@ void mousePressed() {
       p = PANTALLA.SINGIN;
     } else if (logIn.mouseOverButton()) {
       p = PANTALLA.SELECTTEAM;
+    } else if (cambC.mouseOverButton()){
+      p = PANTALLA.CHANGEPASW;
     }
 
     //SINGIN
@@ -21,6 +23,15 @@ void mousePressed() {
     email.isPressed();
 
     if (cont.mouseOverButton()) {
+      p = PANTALLA.LOGIN;
+    }
+    
+  } else if (p == PANTALLA.CHANGEPASW){
+    userCP.isPressed();
+    newPSW.isPressed();
+    confPSW.isPressed();
+    
+    if (confC.mouseOverButton()){
       p = PANTALLA.LOGIN;
     }
 

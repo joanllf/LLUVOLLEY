@@ -1,5 +1,5 @@
 enum PANTALLA {
-  LOGIN, SINGIN, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
+  LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
 };
 
 PANTALLA p = PANTALLA.LOGIN;
@@ -12,6 +12,7 @@ void setup() {
   setButtonsInicio();
   setButtonsLogIn();
   setButtonsSingIn();
+  setButtonsChange();
   setButtonsSelectTeam();
   setButtonsAddTeam();
   setButtonsJugadores();
@@ -29,6 +30,9 @@ void draw() {
     break;
   case SINGIN:
     dibujaSingIn();
+    break;
+  case CHANGEPASW:
+    dibujaChange();
     break;
   case SELECTTEAM:
     dibujaSelectTeam();

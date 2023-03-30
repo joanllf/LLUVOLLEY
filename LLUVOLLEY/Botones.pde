@@ -112,6 +112,29 @@ void displayButtonsSingIn() {
   cont.display();
 }
 
+//Botones de la pantalla cambiar contraseña
+TextField userCP, newPSW, confPSW;
+Button confC;
+
+void setButtonsChange(){
+  userCP = new TextField(width/2 - 190, height/2 + 10, 380, 30);
+  newPSW = new TextField(width/2 - 190, height/2 + 80, 380, 30);
+  confPSW = new TextField(width/2 - 190, height/2 + 150, 380, 30);
+  confC = new Button("Confirmar", width/2 + 10, height/2 + 210, 180, 50);
+}
+
+void displayButtonsChange() {
+  userCP.changeY(23);
+  newPSW.changeY(23);
+  confPSW.changeY(23);
+
+  userCP.display();
+  newPSW.display();
+  confPSW.display();
+  confC.display();
+}
+
+
 // Botones de la pantalla de select team
 Select equipo;
 String[] selectTeam = {"Alevin", "Infantil", "Cadete", "Juvenil"};

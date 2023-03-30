@@ -67,6 +67,17 @@ void dibujaTextoSingIn(){
   popStyle();
 }
 
+void dibujaTextoChange(){
+  pushStyle();
+    textFont(getFontAt(1));
+    textSize(18);
+    fill(0);
+    text("Usuario:", width/2 - 190, height/2 + 5);
+    text("Contraseña:", width/2 - 190, height/2 + 75);
+    text("Confirmar contraseña:", width/2 - 190, height/2 + 145);
+  popStyle();
+}
+
 void dibujaTextoAddTeam(){
   pushStyle();
     textFont(getFontAt(1));
