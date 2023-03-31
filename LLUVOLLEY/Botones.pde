@@ -179,7 +179,7 @@ void displayButtonsAddTeam() {
 }
 
 //Botones de la pantalla jugadores
-Button prev, next;
+Button prev, next, add;
 PagedTable t;
 int row = 8, column = 6;
 String[] headers = {"Nombre", "Dorsal", "Posición", "Altura", "Edad", "Estadísticas"};
@@ -188,12 +188,6 @@ String[][] jugadores = {
   {"Caetano Filter", "7", "Punta", "1,87", "27", "Rece:   Def:"},
   {"Thiago Vanole", "1", "Punta", "1,84", "25", "Rece:   Def:"},
   {"Pedro Jukoski", "3", "Colocador", "1,96", "22", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
   {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
 };
 
@@ -205,15 +199,47 @@ void setButtonsJugadores() {
 
   prev = new Button("PREV", width/2 - 110, 980, 100, 50);
   next = new Button("NEXT", width/2 + 10, 980, 100, 50);
+  add = new Button("ADD", width/2 + 820, 980, 100, 50);
 }
 
 void displayButtonsJugadores() {
   t.display(20, 140, 1880, 800);
   next.display();
   prev.display();
+  add.display();
   updateCursor();
   logo.display();
 }
+
+//jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+TextField nombre, dorsal, posicion, altura, edad;
+Button contA;
+
+void setButtonsAddPlayer() {
+  nombre = new TextField(width/2 - 190, height/2 + 10, 380, 30);
+  dorsal = new TextField(width/2 - 190, height/2 + 80, 380, 30);
+  posicion = new TextField(width/2 - 190, height/2 + 150, 380, 30);
+  altura = new TextField(width/2 - 190, height/2 + 220, 380, 30);
+  edad = new TextField(width/2 - 190, height/2 + 290, 380, 30);
+
+  contA = new Button("Continuar", width/2 -100, height/2 + 335, 200, 50);
+}
+
+void displayButtonsAddPlayer() {
+  nombre.changeY(23);
+  dorsal.changeY(23);
+  posicion.changeY(23);
+  altura.changeY(23);
+  edad.changeY(23);
+
+  nombre.display();
+  dorsal.display();
+  posicion.display();
+  altura.display();
+  edad.display();
+  cont.display();
+}
+
 
 void displayButtonsRotaciones() {
   logo.display();

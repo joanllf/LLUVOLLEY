@@ -67,6 +67,19 @@ void dibujaTextoSingIn(){
   popStyle();
 }
 
+void dibujaTextoAddPlayer(){
+  pushStyle();
+    textFont(getFontAt(1));
+    textSize(18);
+    fill(0);
+    text("Nombre:", width/2 - 190, height/2 + 5);
+    text("Dorsal:", width/2 - 190, height/2 + 75);
+    text("Posición:", width/2 - 190, height/2 + 145);
+    text("Altura:", width/2 - 190, height/2 + 215);
+    text("Edad:", width/2 - 190, height/2 + 285);
+  popStyle();
+}
+
 void dibujaTextoChange(){
   pushStyle();
     textFont(getFontAt(1));

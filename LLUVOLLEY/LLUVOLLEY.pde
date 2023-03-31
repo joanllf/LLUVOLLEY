@@ -1,8 +1,9 @@
 enum PANTALLA {
-  LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
+  LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ADDJUGADOR, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
 };
 
-PANTALLA p = PANTALLA.LOGIN;
+//PANTALLA p = PANTALLA.LOGIN;
+PANTALLA p = PANTALLA.JUGADORES;
 
 void setup() {
   fullScreen();
@@ -16,6 +17,7 @@ void setup() {
   setButtonsSelectTeam();
   setButtonsAddTeam();
   setButtonsJugadores();
+  setButtonsAddPlayer();
   setButtonsEstI();
 
   textFont(getFontAt(0));
@@ -46,6 +48,10 @@ void draw() {
   case JUGADORES:
     dibujaJugadores();
     break;
+  case ADDJUGADOR:
+    dibujaAddPlayer();
+    break;
+    //jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
   case ROTACIONES:
     dibujaRotPred();
     break;

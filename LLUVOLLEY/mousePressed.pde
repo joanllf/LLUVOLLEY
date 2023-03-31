@@ -84,6 +84,8 @@ void mousePressed() {
       t.nextPage();
     } else if (logo.mouseOverButton()) {
       p = PANTALLA.INICIO;
+    } else if (contA.mouseOverButton()){
+      p = PANTALLA.ADDJUGADOR;
     }
 
     //ROTACIONES
