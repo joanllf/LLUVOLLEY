@@ -63,6 +63,7 @@ void draw() {
   case ESTINICIO:
     displayFondo(0, 0, width, height);
     dibujaEstI();
+    break;
   case ESTGLOBALES:
     displayFondo(0, 0, width, height);
     displayButtonsEstG();

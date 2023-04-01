@@ -256,6 +256,7 @@ void displayButtonsEstI() {
   part.setTextSize(32);
   glob.display();
   part.display();
+  logo.display();
 }
 
 void displayButtonsEstG() {
