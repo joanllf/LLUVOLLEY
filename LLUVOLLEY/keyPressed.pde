@@ -20,7 +20,14 @@ void keyPressed() {
   userT.keyPressed(key, (int)keyCode);
   paswT.keyPressed(key, (int)keyCode);
   categ.keyPressed(key, (int)keyCode);
-
+  
+  //Botones de la pantalla addjugador
+  nombre.keyPressed(key, (int)keyCode);
+  dorsal.keyPressed(key, (int)keyCode);
+  posicion.keyPressed(key, (int)keyCode);
+  altura.keyPressed(key, (int)keyCode);
+  edad.keyPressed(key, (int)keyCode);
+  
   if (keyCode==LEFT) {
     t.prevPage();
   } else if (keyCode==RIGHT) {

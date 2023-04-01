@@ -2,8 +2,7 @@ enum PANTALLA {
   LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ADDJUGADOR, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
 };
 
-//PANTALLA p = PANTALLA.LOGIN;
-PANTALLA p = PANTALLA.JUGADORES;
+PANTALLA p = PANTALLA.LOGIN;
 
 void setup() {
   fullScreen();
@@ -24,43 +23,53 @@ void setup() {
 }
 
 void draw() {
-  displayFondo(0, 0, width, height);
+  //displayFondo(0, 0, width, height);
 
   switch(p) {
   case LOGIN:
+    displayFondo(0, 0, width, height);
     dibujaLogIn();
     break;
   case SINGIN:
+    displayFondo(0, 0, width, height);
     dibujaSingIn();
     break;
   case CHANGEPASW:
+    displayFondo(0, 0, width, height);
     dibujaChange();
     break;
   case SELECTTEAM:
+    displayFondo(0, 0, width, height);
     dibujaSelectTeam();
     break;
   case ADDTEAM:
+    displayFondo(0, 0, width, height);
     dibujaAddTeam();
     break;
   case INICIO:
+    displayFondo(0, 0, width, height);
     dibujaInicio();
     break;
   case JUGADORES:
+    displayFondo(0, 0, width, height);
     dibujaJugadores();
     break;
   case ADDJUGADOR:
     dibujaAddPlayer();
     break;
-    //jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
   case ROTACIONES:
+    displayFondo(0, 0, width, height);
     dibujaRotPred();
     break;
   case ESTINICIO:
+    displayFondo(0, 0, width, height);
     dibujaEstI();
   case ESTGLOBALES:
+    displayFondo(0, 0, width, height);
     displayButtonsEstG();
     break;
   case ESTPARTIDO:
+    displayFondo(0, 0, width, height);
     displayButtonsEstP();
     break;
   }

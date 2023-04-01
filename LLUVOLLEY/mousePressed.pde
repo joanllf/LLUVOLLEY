@@ -1,7 +1,7 @@
 void mousePressed() {
-  //LOGIN
+   
+    //LOGIN
   if (p==PANTALLA.LOGIN) {
-    // Botones de la pantalla log in
     usuario.isPressed();
     pasw.isPressed();
 
@@ -9,13 +9,12 @@ void mousePressed() {
       p = PANTALLA.SINGIN;
     } else if (logIn.mouseOverButton()) {
       p = PANTALLA.SELECTTEAM;
-    } else if (cambC.mouseOverButton()){
+    } else if (cambC.mouseOverButton()) {
       p = PANTALLA.CHANGEPASW;
     }
 
     //SINGIN
   } else if (p == PANTALLA.SINGIN) {
-    // Botones de la pantalla de sing in
     userR.isPressed();
     paswR.isPressed();
     repPasw.isPressed();
@@ -25,13 +24,14 @@ void mousePressed() {
     if (cont.mouseOverButton()) {
       p = PANTALLA.LOGIN;
     }
-    
-  } else if (p == PANTALLA.CHANGEPASW){
+
+    //CHANGE
+  } else if (p == PANTALLA.CHANGEPASW) {
     userCP.isPressed();
     newPSW.isPressed();
     confPSW.isPressed();
-    
-    if (confC.mouseOverButton()){
+
+    if (confC.mouseOverButton()) {
       p = PANTALLA.LOGIN;
     }
 
@@ -84,8 +84,20 @@ void mousePressed() {
       t.nextPage();
     } else if (logo.mouseOverButton()) {
       p = PANTALLA.INICIO;
-    } else if (contA.mouseOverButton()){
+    } else if (add.mouseOverButton()) {
       p = PANTALLA.ADDJUGADOR;
+    }
+    
+    //ADDJUGADOR
+  } else if (p == PANTALLA.ADDJUGADOR) {
+    nombre.isPressed();
+    dorsal.isPressed();
+    posicion.isPressed();
+    altura.isPressed();
+    edad.isPressed();
+
+    if (contA.mouseOverButton()) {
+      p = PANTALLA.JUGADORES;
     }
 
     //ROTACIONES
@@ -93,7 +105,7 @@ void mousePressed() {
     if (logo.mouseOverButton()) {
       p = PANTALLA.INICIO;
     }
-    
+
     //ESTINICIO
   } else if (p == PANTALLA.ESTINICIO) {
     if (logo.mouseOverButton()) {
@@ -115,6 +127,5 @@ void mousePressed() {
     if (logo.mouseOverButton()) {
       p = PANTALLA.ESTINICIO;
     }
-    
   }
 }

@@ -1,5 +1,4 @@
 // Classe Botó
-
 class ImageButton {
 
   // Propietats d'un botó:
@@ -20,7 +19,6 @@ class ImageButton {
   }
 
   // Setters
-
   void setEnabled(boolean b) {
     this.enabled = b;
   }
