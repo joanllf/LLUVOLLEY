@@ -2,7 +2,8 @@ enum PANTALLA {
   LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ADDJUGADOR, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
 };
 
-PANTALLA p = PANTALLA.LOGIN;
+//PANTALLA p = PANTALLA.LOGIN;
+PANTALLA p = PANTALLA.ESTINICIO;
 
 void setup() {
   fullScreen();
@@ -23,8 +24,6 @@ void setup() {
 }
 
 void draw() {
-  //displayFondo(0, 0, width, height);
-
   switch(p) {
   case LOGIN:
     displayFondo(0, 0, width, height);
