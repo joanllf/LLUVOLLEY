@@ -181,20 +181,20 @@ void displayButtonsAddTeam() {
 //Botones de la pantalla jugadores
 Button prev, next, add;
 PagedTable t;
-int row = 8, column = 6;
-String[] headers = {"Nombre", "Dorsal", "Posición", "Altura", "Edad", "Estadísticas"};
+int row = 8, column = 5;
+String[] headers = {"Nombre", "Dorsal", "Posición", "Altura", "Edad"};
 float [] colWidths = {15, 8, 12, 10, 10, 45};
-String[][] jugadores = {
+/*String[][] jugadores = {
   {"Caetano Filter", "7", "Punta", "1,87", "27", "Rece:   Def:"},
   {"Thiago Vanole", "1", "Punta", "1,84", "25", "Rece:   Def:"},
   {"Pedro Jukoski", "3", "Colocador", "1,96", "22", "Rece:   Def:"},
   {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
 };
-
+*/
 void setButtonsJugadores() {
   t = new PagedTable(row, column);
   t.setHeaders(headers);
-  t.setData(jugadores);
+  t.setData(getInfoTaulaJugador());
   t.setColumnWidths(colWidths);
 
   prev = new Button("PREV", width/2 - 110, 980, 100, 50);

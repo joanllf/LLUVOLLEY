@@ -39,42 +39,27 @@ void insertJugador(String nombre, String altura, String dorsal, String edad, Str
   msql.query(q);
 }
 
-// Obté el número de files de la taula
 int getNumRowsTaula(String nomTaula){
   msql.query( "SELECT COUNT(*) AS n FROM %s", nomTaula );
   msql.next();
   int numRows = msql.getInt("n");
   return numRows;
 }
+ 
+String[][] getInfoTaulaJugador(){
   
-// Obté informació de la taula Unitat
-String[][] getInfoTaulaUnitat(){
+  int numRows = getNumRowsTaula("jugador");
   
-  int numRows = getNumRowsTaula("unitat");
-  
-  String[][] data = new String[numRows][2];
-  
-  int nr=0;
-  msql.query( "SELECT * FROM unitat" );
-  while (msql.next()){
-      data[nr][0] = String.valueOf(msql.getInt("numero"));
-      data[nr][1] = msql.getString("nom");
-      nr++;
-  }
-  return data;
-}
-
-// Obté array am camp nom de la taula Unitat
-String[] getNomsTaulaUnitat(){
-  
-  int numRows = getNumRowsTaula("unitat");
-  
-  String[] data = new String[numRows];
+  String[][] data = new String[numRows][7];
   
   int nr=0;
-  msql.query( "SELECT nom FROM unitat" );
+  msql.query( "SELECT * FROM jugador" );
   while (msql.next()){
-      data[nr] = msql.getString("nom");
+      data[nr][1] = String.valueOf(msql.getInt("idjugador"));
+      data[nr][0] = msql.getString("nomjugador");
+      data[nr][3] = String.valueOf(msql.getFloat("altura"));
+      data[nr][2] = String.valueOf(msql.getInt("posición_idposición"));
+      data[nr][4] = String.valueOf(msql.getInt("edad"));
       nr++;
   }
   return data;
