@@ -7,6 +7,7 @@ PANTALLA p = PANTALLA.LOGIN;
 
 void setup() {
   fullScreen();
+  conexionBBDD();
   setMedias();
   setColors();
   setFonts();

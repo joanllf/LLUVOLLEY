@@ -73,13 +73,18 @@ class TextField {
         boolean isKeyCapitalLetter = (key >= 'A' && key <= 'Z');
         boolean isKeySmallLetter = (key >= 'a' && key <= 'z');
         boolean isKeyNumber = (key >= '0' && key <= '9');
+        boolean isPoint = (key=='.');
 
-        if (isKeyCapitalLetter || isKeySmallLetter || isKeyNumber) {
+        if (isKeyCapitalLetter || isKeySmallLetter || isKeyNumber || isPoint) {
           addText(key);
         }
       }
     }
   }
+   
+    void removeAllText(){
+     this.text = "";
+   }
 
   // Afegeix la lletra c al final del text
   void addText(char c) {
@@ -116,4 +121,8 @@ class TextField {
       selected = false;
     }
   }
+  
+  String getValue(){
+     return this.text;
+   }
 }

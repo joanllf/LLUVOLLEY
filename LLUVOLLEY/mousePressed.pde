@@ -1,6 +1,6 @@
 void mousePressed() {
-   
-    //LOGIN
+
+  //LOGIN
   if (p==PANTALLA.LOGIN) {
     usuario.isPressed();
     pasw.isPressed();
@@ -87,7 +87,7 @@ void mousePressed() {
     } else if (add.mouseOverButton()) {
       p = PANTALLA.ADDJUGADOR;
     }
-    
+
     //ADDJUGADOR
   } else if (p == PANTALLA.ADDJUGADOR) {
     nombre.isPressed();
@@ -96,8 +96,14 @@ void mousePressed() {
     altura.isPressed();
     edad.isPressed();
 
-    if (contA.mouseOverButton()) {
-      p = PANTALLA.JUGADORES;
+    if (contA.mouseOverButton() && contA.enabled) {
+      String n = nombre.getValue();
+      String a = altura.getValue();
+      String d = dorsal.getValue();
+      String e = edad.getValue();
+      String po = posicion.getValue();
+      insertJugador(n, a, d, e, po);
+        p = PANTALLA.JUGADORES;
     }
 
     //ROTACIONES
