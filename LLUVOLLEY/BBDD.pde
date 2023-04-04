@@ -20,9 +20,9 @@ void conexionBBDD(){
     }
 }
 
-void insertInfoTaulaCategoria(String nom){
+void insertCategoria(String nom){
   String sNom = nom.replace("\'", "\\'");
-  String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES ('', '"+sNom+"')";
+  String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES (NULL, '"+sNom+"')";
   println(q);
   msql.query(q);
 }

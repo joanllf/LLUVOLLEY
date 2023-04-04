@@ -25,16 +25,14 @@ void mousePressed() {
       String pw = paswR.getValue();
       String rpw = repPasw.getValue();
       
-    //  insertUsuario(c, pw);
-      println("pw: "+pw);
-      println("prw: " + rpw);
-      println(pw.equals(rpw));
       if (pw.equals(rpw)) {
-        print("aaaa");
         insertUsuario(c, pw);
+        
+        userR.reset();
+        paswR.reset();
+        repPasw.reset();
 
         p = PANTALLA.LOGIN;
-        
       } else {
         userR.reset();
         paswR.reset();
@@ -77,6 +75,11 @@ void mousePressed() {
     categ.isPressed();
 
     if (conf.mouseOverButton()) {
+      
+      String cat = categ.getValue();
+      
+      insertCategoria(cat);
+      
       p = PANTALLA.SELECTTEAM;
     }
 
