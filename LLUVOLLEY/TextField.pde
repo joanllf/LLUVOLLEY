@@ -125,4 +125,8 @@ class TextField {
   String getValue(){
      return this.text;
    }
+   
+   void reset(){
+     this.text ="";
+   }
 }

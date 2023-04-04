@@ -8,8 +8,6 @@ void keyPressed() {
   userR.keyPressed(key, (int)keyCode);
   paswR.keyPressed(key, (int)keyCode);
   repPasw.keyPressed(key, (int)keyCode);
-  club.keyPressed(key, (int)keyCode);
-  email.keyPressed(key, (int)keyCode);
   
   // Botones de la pantalla change pasword
   userCP.keyPressed(key, (int)keyCode);

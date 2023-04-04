@@ -84,31 +84,26 @@ void displayButtonsLogIn() {
 }
 
 //Botones de la pantalla de Register
-TextField userR, paswR, repPasw, club, email;
+TextField userR, paswR, repPasw;
 Button cont;
 
 void setButtonsSingIn() {
   userR = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   paswR = new TextField(width/2 - 190, height/2 + 80, 380, 30);
   repPasw = new TextField(width/2 - 190, height/2 + 150, 380, 30);
-  club = new TextField(width/2 - 190, height/2 + 220, 380, 30);
-  email = new TextField(width/2 - 190, height/2 + 290, 380, 30);
 
-  cont = new Button("Continuar", width/2 -100, height/2 + 335, 200, 50);
+  cont = new Button("Continuar", width/2 -100, height/2 + 200, 200, 50);
 }
 
 void displayButtonsSingIn() {
   userR.changeY(23);
   paswR.changeY(23);
   repPasw.changeY(23);
-  club.changeY(23);
-  email.changeY(23);
 
   userR.display();
   paswR.display();
   repPasw.display();
-  club.display();
-  email.display();
+
   cont.display();
 }
 
@@ -143,7 +138,7 @@ Button addTeam, confST;
 
 void setButtonsSelectTeam() {
   equipo = new Select(selectTeam, width/2 - 300, height/2 - 25, 600, 80);
-  addTeam = new Button("Añadir equipo", width/2 - 300, height/2 + 70, 200, 70);
+  addTeam = new Button("Añadir categoría", width/2 - 300, height/2 + 70, 200, 70);
   confST = new Button("Confirmar", width/2 + 100, height/2 + 70, 200, 70);
 }
 
@@ -183,14 +178,8 @@ Button prev, next, add;
 PagedTable t;
 int row = 8, column = 5;
 String[] headers = {"Nombre", "Dorsal", "Posición", "Altura", "Edad"};
-float [] colWidths = {15, 8, 12, 10, 10, 45};
-/*String[][] jugadores = {
-  {"Caetano Filter", "7", "Punta", "1,87", "27", "Rece:   Def:"},
-  {"Thiago Vanole", "1", "Punta", "1,84", "25", "Rece:   Def:"},
-  {"Pedro Jukoski", "3", "Colocador", "1,96", "22", "Rece:   Def:"},
-  {"Víctor Mendez", "13", "Central", "2,03", "19", "Rece:   Def:"},
-};
-*/
+float [] colWidths = {31, 16, 21, 16, 16};
+
 void setButtonsJugadores() {
   t = new PagedTable(row, column);
   t.setHeaders(headers);
@@ -199,11 +188,11 @@ void setButtonsJugadores() {
 
   prev = new Button("PREV", width/2 - 110, 980, 100, 50);
   next = new Button("NEXT", width/2 + 10, 980, 100, 50);
-  add = new Button("ADD", width/2 + 820, 980, 100, 50);
+  add = new Button("ADD", width/2 + 600, 980, 100, 50);
 }
 
 void displayButtonsJugadores() {
-  t.display(20, 140, 1880, 800);
+  t.display(210, 140, 1500, 800);
   next.display();
   prev.display();
   add.display();
@@ -236,7 +225,7 @@ void displayButtonsAddPlayer() {
   posicion.display();
   altura.display();
   edad.display();
-  cont.display();
+  contA.display();
 }
 
 

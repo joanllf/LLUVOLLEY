@@ -27,8 +27,8 @@ void insertInfoTaulaCategoria(String nom){
   msql.query(q);
 }
 
-void insertUsuario(String user, String pasw){
-  String q ="INSERT INTO `usuario` (`idusuario`, `pwusuario`) VALUES ('"+user+"', '"+pasw+"')";
+void insertUsuario(String us, String pw){
+  String q ="INSERT INTO `usuario` (`idusuario`, `pwusuario`) VALUES ('"+us+"', '"+pw+"')";
   println(q);
   msql.query(q);
 }
@@ -53,12 +53,12 @@ String[][] getInfoTaulaJugador(){
   String[][] data = new String[numRows][7];
   
   int nr=0;
-  msql.query( "SELECT * FROM jugador" );
+  msql.query( "SELECT j.idjugador AS id, j.nomjugador AS nom, j.altura AS altura, j.edad AS edad, p.nomposicio AS posicio FROM jugador j, posición p WHERE j.posición_idposición=p.idposición" );
   while (msql.next()){
-      data[nr][1] = String.valueOf(msql.getInt("idjugador"));
-      data[nr][0] = msql.getString("nomjugador");
+      data[nr][0] = msql.getString("nom");
+      data[nr][1] = String.valueOf(msql.getInt("id"));
+      data[nr][2] = msql.getString("posicio");
       data[nr][3] = String.valueOf(msql.getFloat("altura"));
-      data[nr][2] = String.valueOf(msql.getInt("posición_idposición"));
       data[nr][4] = String.valueOf(msql.getInt("edad"));
       nr++;
   }

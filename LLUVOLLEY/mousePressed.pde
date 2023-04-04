@@ -18,11 +18,29 @@ void mousePressed() {
     userR.isPressed();
     paswR.isPressed();
     repPasw.isPressed();
-    club.isPressed();
-    email.isPressed();
 
     if (cont.mouseOverButton()) {
-      p = PANTALLA.LOGIN;
+
+      String c = userR.getValue();
+      String pw = paswR.getValue();
+      String rpw = repPasw.getValue();
+      
+    //  insertUsuario(c, pw);
+      println("pw: "+pw);
+      println("prw: " + rpw);
+      println(pw.equals(rpw));
+      if (pw.equals(rpw)) {
+        print("aaaa");
+        insertUsuario(c, pw);
+
+        p = PANTALLA.LOGIN;
+        
+      } else {
+        userR.reset();
+        paswR.reset();
+        repPasw.reset();
+      }
+      
     }
 
     //CHANGE
@@ -102,8 +120,19 @@ void mousePressed() {
       String d = dorsal.getValue();
       String e = edad.getValue();
       String po = posicion.getValue();
+
       insertJugador(n, a, d, e, po);
-        p = PANTALLA.JUGADORES;
+      t = new PagedTable(row, column);
+      t.setHeaders(headers);
+      t.setData(getInfoTaulaJugador());
+      t.setColumnWidths(colWidths);
+
+      nombre.reset();
+      dorsal.reset();
+      posicion.reset();
+      altura.reset();
+      edad.reset();
+      p = PANTALLA.JUGADORES;
     }
 
     //ROTACIONES
