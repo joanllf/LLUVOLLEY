@@ -79,3 +79,9 @@ String[] getInfoTaulaCategoria(){
   }
   return data;
 }
+
+void updatePasword(String nPsw, String usuario){
+  String q = "UPDATE `usuario` SET `pwusuario`='"+nPsw+"' WHERE `idusuario` = '"+usuario+"'";
+  println(q);
+  msql.query(q);
+}

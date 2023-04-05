@@ -24,10 +24,10 @@ void mousePressed() {
       String c = userR.getValue();
       String pw = paswR.getValue();
       String rpw = repPasw.getValue();
-      
+
       if (pw.equals(rpw)) {
         insertUsuario(c, pw);
-        
+
         userR.reset();
         paswR.reset();
         repPasw.reset();
@@ -38,7 +38,6 @@ void mousePressed() {
         paswR.reset();
         repPasw.reset();
       }
-      
     }
 
     //CHANGE
@@ -48,7 +47,23 @@ void mousePressed() {
     confPSW.isPressed();
 
     if (confC.mouseOverButton()) {
-      p = PANTALLA.LOGIN;
+
+      String pw = newPSW.getValue();
+      String cPw = confPSW.getValue();
+      String us = userCP.getValue();
+
+      if (pw.equals(cPw)) {
+        updatePasword(pw, us);
+        
+        newPSW.reset();
+        confPSW.reset();
+        userCP.reset();
+
+        p = PANTALLA.LOGIN;
+      } else {
+        newPSW.reset();
+        confPSW.reset();
+      }
     }
 
     //SELECTTEAM
@@ -75,15 +90,15 @@ void mousePressed() {
     categ.isPressed();
 
     if (conf.mouseOverButton()) {
-      
+
       String cat = categ.getValue();
-      
-      if (cat.equals("")){
+
+      if (cat.equals("")) {
         categ.reset();
       } else {
         insertCategoria(cat);
       }
-      
+
       p = PANTALLA.SELECTTEAM;
     }
 
