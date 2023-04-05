@@ -131,13 +131,12 @@ void displayButtonsChange() {
 
 
 // Botones de la pantalla de select team
-Select equipo;
-//String[] selectTeam = {"Alevin", "Infantil", "Cadete", "Juvenil"};
+SelectTextList equipo;
 
 Button addTeam, confST;
 
 void setButtonsSelectTeam() {
-  equipo = new Select(getInfoTaulaCategoria(), width/2 - 300, height/2 - 25, 600, 80);
+  equipo = new SelectTextList(getInfoTaulaCategoria(), width/2 - 300, height/2 - 25, 600, 80);
   addTeam = new Button("Añadir categoría", width/2 - 300, height/2 + 70, 200, 70);
   confST = new Button("Confirmar", width/2 + 100, height/2 + 70, 200, 70);
 }

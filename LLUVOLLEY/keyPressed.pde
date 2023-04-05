@@ -26,6 +26,8 @@ void keyPressed() {
   altura.keyPressed(key, (int)keyCode);
   edad.keyPressed(key, (int)keyCode);
   
+  equipo.keyOn();
+  
   if (keyCode==LEFT) {
     t.prevPage();
   } else if (keyCode==RIGHT) {
