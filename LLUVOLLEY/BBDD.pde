@@ -64,3 +64,18 @@ String[][] getInfoTaulaJugador(){
   }
   return data;
 }
+
+String[] getInfoTaulaCategoria(){
+  
+  int numRows = getNumRowsTaula("categoría");
+  
+  String[] data = new String[numRows];
+  
+  int nr=0;
+  msql.query( "SELECT nomcategoria FROM `categoría` WHERE 1;" );
+  while (msql.next()){
+    data[nr] = msql.getString("nomcotegoria");
+    nr++;
+  }
+  return data;
+}

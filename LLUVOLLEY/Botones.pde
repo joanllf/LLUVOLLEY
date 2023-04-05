@@ -92,7 +92,7 @@ void setButtonsSingIn() {
   paswR = new TextField(width/2 - 190, height/2 + 80, 380, 30);
   repPasw = new TextField(width/2 - 190, height/2 + 150, 380, 30);
 
-  cont = new Button("Continuar", width/2 -100, height/2 + 200, 200, 50);
+  cont = new Button("Continuar", width/2 + 10, height/2 + 210, 180, 50);
 }
 
 void displayButtonsSingIn() {
@@ -132,12 +132,12 @@ void displayButtonsChange() {
 
 // Botones de la pantalla de select team
 Select equipo;
-String[] selectTeam = {"Alevin", "Infantil", "Cadete", "Juvenil"};
+//String[] selectTeam = {"Alevin", "Infantil", "Cadete", "Juvenil"};
 
 Button addTeam, confST;
 
 void setButtonsSelectTeam() {
-  equipo = new Select(selectTeam, width/2 - 300, height/2 - 25, 600, 80);
+  equipo = new Select(getInfoTaulaCategoria(), width/2 - 300, height/2 - 25, 600, 80);
   addTeam = new Button("Añadir categoría", width/2 - 300, height/2 + 70, 200, 70);
   confST = new Button("Confirmar", width/2 + 100, height/2 + 70, 200, 70);
 }
