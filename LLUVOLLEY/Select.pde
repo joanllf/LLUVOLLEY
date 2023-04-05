@@ -7,7 +7,7 @@ class Select {
   boolean collapsed = true;  // Plegat / Desplegat
   boolean enabled;           // Abilitat / desabilitat
   
-  float lineSpace = 15;      // Espai entre línies
+  float lineSpace = 5;      // Espai entre línies
   
   Select(String[] texts, float x, float y, float w, float h){
     

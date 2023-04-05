@@ -78,7 +78,11 @@ void mousePressed() {
       
       String cat = categ.getValue();
       
-      insertCategoria(cat);
+      if (cat.equals("")){
+        categ.reset();
+      } else {
+        insertCategoria(cat);
+      }
       
       p = PANTALLA.SELECTTEAM;
     }

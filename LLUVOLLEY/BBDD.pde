@@ -72,9 +72,9 @@ String[] getInfoTaulaCategoria(){
   String[] data = new String[numRows];
   
   int nr=0;
-  msql.query( "SELECT nomcategoria FROM `categoría` WHERE 1;" );
+  msql.query( "SELECT nomcategoria FROM categoría ORDER BY nomcategoria" );
   while (msql.next()){
-    data[nr] = msql.getString("nomcotegoria");
+    data[nr] = msql.getString("nomcategoria");
     nr++;
   }
   return data;
