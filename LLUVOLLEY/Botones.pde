@@ -4,6 +4,7 @@
 Button sRot, rRot, dib, bor, jug, rotPre, est;
 TextField eMar, player;
 ImageButton logo;
+Counter local, visitante;
 
 void setButtonsInicio() {
   // Botones bajo la pista
@@ -16,6 +17,8 @@ void setButtonsInicio() {
   jug    = new Button("JUGADORES", 2 * marginH + pistaW, 4 * marginV + logoH + marcadorH + 70, menW, menH);
   rotPre = new Button("ROTACIONES PREDEFINIDAS", 2 * marginH + pistaW, 5 * marginV + logoH + marcadorH + 70 + menH, menW, menH);
   est    = new Button("ESTADÍSTICAS", 2 * marginH + pistaW, 6 * marginV + logoH + marcadorH + 70 + 2 * menH, menW, menH);
+
+  local  = new Counter(960, 160, 200, 200);
 
   jug.setColor(getColorAt(1));
   rotPre.setColor(getColorAt(1));
@@ -58,6 +61,7 @@ void displayButtonsInicio() {
   player.display();
   popStyle();
   logo.display();
+  local.display();
 }
 
 // Botones de la pantalla de Lon In

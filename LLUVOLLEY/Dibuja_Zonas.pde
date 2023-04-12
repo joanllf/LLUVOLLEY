@@ -13,6 +13,7 @@ void dibujaPista(){
   popStyle();
   
   pushStyle();
+    textSize(48);
     fill(getColorAt(5), 200);
     text("1", 30, 70);
     text("6", 330, 70);

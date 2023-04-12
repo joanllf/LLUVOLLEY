@@ -68,18 +68,12 @@ void mousePressed() {
 
     //SELECTTEAM
   } else if (p == PANTALLA.SELECTTEAM) {
-
-    /*if (equipo.mouseOverSelect() && equipo.enabled) {
-      if (!equipo.collapsed) {
-        equipo.update();      // Actualitzar valor
-      }
-      equipo.toggle();        // Plegar o desplegar*/
       
       equipo.mouseOn();
       
       if (addTeam.mouseOverButton()) {
       p = PANTALLA.ADDTEAM;
-    } else if (confST.mouseOverButton()) {
+    } else if (confST.mouseOverButton() && confST.enabled) {
       p = PANTALLA.INICIO;
     } else if (logo.mouseOverButton()) {
       p = PANTALLA.LOGIN;
