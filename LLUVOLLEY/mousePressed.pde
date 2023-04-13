@@ -104,8 +104,8 @@ void mousePressed() {
     eMar.isPressed();
     player.isPressed();
 
-    if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2) 
-     || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
+    if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2)
+      || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
       local.resetCounter();
       visitante.resetCounter();
     } else {
@@ -113,6 +113,40 @@ void mousePressed() {
       visitante.update();
     }
 
+    if (cl1.onMouseOver()) {
+      cl1.toggle();
+    } else if (cl2.onMouseOver()) {
+      cl2.toggle();
+    } else if (cl3.onMouseOver()) {
+      cl3.toggle();
+    } else if (cl4.onMouseOver()) {
+      cl4.toggle();
+    } else if (cl5.onMouseOver()) {
+      cl5.toggle();
+    } else if (cl6.onMouseOver()) {
+      cl6.toggle();
+    } else if (cv1.onMouseOver()) {
+      cv1.toggle();
+    } else if (cv2.onMouseOver()) {
+      cv2.toggle();
+    } else if (cv3.onMouseOver()) {
+      cv3.toggle();
+    } else if (cv4.onMouseOver()) {
+      cv4.toggle();
+    } else if (cv5.onMouseOver()) {
+      cv5.toggle();
+    } else if (cv6.onMouseOver()) {
+      cv6.toggle();
+    } else if (tl1.onMouseOver()) {
+      tl1.toggle();
+    } else if (tl2.onMouseOver()) {
+      tl2.toggle();
+    } else if (tv1.onMouseOver()) {
+      tv1.toggle();
+    } else if (tv2.onMouseOver()) {
+      tv2.toggle();
+    }
+      
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {

@@ -39,7 +39,8 @@ class Counter {
 
   // Dibuixa el botó
   void display() {
-
+    
+    strokeWeight(1);
     fill(getColorAt(3));                            // Color
     rect(this.x, this.y, this.w, this.h);   // Rectangle del botó
 

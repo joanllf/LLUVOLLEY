@@ -5,6 +5,10 @@ Button sRot, rRot, dib, bor, jug, rotPre, est;
 TextField eMar, player;
 ImageButton logo;
 Counter local, visitante;
+CheckBox cl1, cl2, cl3, cl4, cl5, cl6,
+         cv1, cv2, cv3, cv4, cv5, cv6, 
+         tl1, tl2, 
+         tv1, tv2;
 
 void setButtonsInicio() {
   // Botones bajo la pista
@@ -20,6 +24,26 @@ void setButtonsInicio() {
 
   local  = new Counter(960, 160, 300, 300);
   visitante = new Counter(1580, 160, 300, 300);
+  
+  cl1 = new CheckBox(1280, 160, 50);
+  cl2 = new CheckBox(1280, 223, 50);
+  cl3 = new CheckBox(1280, 286, 50);
+  cl4 = new CheckBox(1280, 349, 50);
+  cl5 = new CheckBox(1280, 412, 50);
+  cl6 = new CheckBox(1280, 475, 50);
+  
+  cv1 = new CheckBox(1510, 160, 50);
+  cv2 = new CheckBox(1510, 223, 50);
+  cv3 = new CheckBox(1510, 286, 50);
+  cv4 = new CheckBox(1510, 349, 50);
+  cv5 = new CheckBox(1510, 412, 50);
+  cv6 = new CheckBox(1510, 475, 50);
+  
+  tl1 = new CheckBox(1350, 160, 50);
+  tl2 = new CheckBox(1350, 223, 50);
+  
+  tv1 = new CheckBox(1440, 160, 50);
+  tv2 = new CheckBox(1440, 223, 50);
 
   jug.setColor(getColorAt(1));
   rotPre.setColor(getColorAt(1));
@@ -64,6 +88,26 @@ void displayButtonsInicio() {
   logo.display();
   local.display();
   visitante.display();
+  cl1.display();
+  cl2.display();
+  cl3.display();
+  cl4.display();
+  cl5.display();
+  cl6.display();
+  cv1.display();
+  cv2.display();
+  cv3.display();
+  cv4.display();
+  cv5.display();
+  cv6.display();
+  tl1.setColorCheck(getColorAt(4));
+  tl2.setColorCheck(getColorAt(4));
+  tv1.setColorCheck(getColorAt(4));
+  tv2.setColorCheck(getColorAt(4));
+  tl1.display();
+  tl2.display();
+  tv1.display();
+  tv2.display();
 }
 
 // Botones de la pantalla de Lon In
