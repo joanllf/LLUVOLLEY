@@ -10,9 +10,6 @@ class Counter {
   // Propietats d'un counter:
   float x, y, w, h;  // Posició i dimensions
 
-  // Colors de farciment i contorn
-  color fillColor;
-
   // Mètode Constructor
   Counter(float x, float y, float w, float h) {
     this.x = x;
@@ -31,11 +28,19 @@ class Counter {
     this.minValue = minValue;
     this.maxValue = maxValue;
   }
+  
+  int getValue(){
+    return this.value;
+  }
+  
+  void resetCounter(){
+    this.value = 0;
+  }
 
   // Dibuixa el botó
   void display() {
 
-    fill(getColorAt(5));                            // Color
+    fill(getColorAt(3));                            // Color
     rect(this.x, this.y, this.w, this.h);   // Rectangle del botó
 
     pushStyle();

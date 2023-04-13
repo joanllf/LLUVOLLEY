@@ -56,6 +56,7 @@ void dibujaInicio() {
   dibujaMarcador();
   displayButtonsInicio();
   dibujaFletchas();
+  dibujaEqMarcador();
 }
 
 void dibujaJugadores() {

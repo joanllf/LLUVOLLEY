@@ -54,7 +54,7 @@ void mousePressed() {
 
       if (pw.equals(cPw)) {
         updatePasword(pw, us);
-        
+
         newPSW.reset();
         confPSW.reset();
         userCP.reset();
@@ -68,10 +68,10 @@ void mousePressed() {
 
     //SELECTTEAM
   } else if (p == PANTALLA.SELECTTEAM) {
-      
-      equipo.mouseOn();
-      
-      if (addTeam.mouseOverButton()) {
+
+    equipo.mouseOn();
+
+    if (addTeam.mouseOverButton()) {
       p = PANTALLA.ADDTEAM;
     } else if (confST.mouseOverButton() && confST.enabled) {
       p = PANTALLA.INICIO;
@@ -103,9 +103,15 @@ void mousePressed() {
   } else if (p == PANTALLA.INICIO) {
     eMar.isPressed();
     player.isPressed();
-    local.update();
-    visitante.update();
-    
+
+    if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2) || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
+      local.resetCounter();
+      visitante.resetCounter();
+    } else {
+      local.update();
+      visitante.update();
+    }
+
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {

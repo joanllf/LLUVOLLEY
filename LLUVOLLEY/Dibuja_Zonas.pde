@@ -31,6 +31,16 @@ void dibujaMarcador(){
   popStyle();
 }
 
+void dibujaEqMarcador(){
+  pushStyle();
+  textAlign(CENTER);
+  fill(getColorAt(5));
+  textSize(48);
+  text("LOCAL", 1110, 200);
+  text("VISITANTE", 1580 + 150, 200);
+  popStyle();
+}
+
 void dibujaFletchas(){
   pushMatrix();
     translate(2 * marginH + 2 * rotW + 135, marginV + pistaH + 55);
