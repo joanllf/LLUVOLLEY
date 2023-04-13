@@ -36,8 +36,8 @@ void dibujaEqMarcador(){
   textAlign(CENTER);
   fill(getColorAt(5));
   textSize(48);
-  text("LOCAL", 1110, 200);
-  text("VISITANTE", 1580 + 150, 200);
+  text("LOCAL", 1110, 210);
+  text("VISITANTE", 1580 + 150, 210);
   popStyle();
 }
 

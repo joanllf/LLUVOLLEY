@@ -44,10 +44,10 @@ class Counter {
     rect(this.x, this.y, this.w, this.h);   // Rectangle del botó
 
     pushStyle();
-    textMode(CENTER);
+    textAlign(CENTER);
     fill(0);
-    textSize(64);
-    text(value, this.x + this.w/2 - 22, this.y + this.h/2 + 20);
+    textSize(150);
+    text(value, this.x + this.w/2, this.y + this.h/2 + 70);
     popStyle();
 
 
