@@ -18,7 +18,8 @@ void setButtonsInicio() {
   rotPre = new Button("ROTACIONES PREDEFINIDAS", 2 * marginH + pistaW, 5 * marginV + logoH + marcadorH + 70 + menH, menW, menH);
   est    = new Button("ESTADÍSTICAS", 2 * marginH + pistaW, 6 * marginV + logoH + marcadorH + 70 + 2 * menH, menW, menH);
 
-  local  = new Counter(960, 160, 200, 200);
+  local  = new Counter(960, 160, 300, 300);
+  visitante = new Counter(1580, 160, 300, 300);
 
   jug.setColor(getColorAt(1));
   rotPre.setColor(getColorAt(1));
@@ -62,6 +63,7 @@ void displayButtonsInicio() {
   popStyle();
   logo.display();
   local.display();
+  visitante.display();
 }
 
 // Botones de la pantalla de Lon In

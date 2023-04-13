@@ -103,6 +103,9 @@ void mousePressed() {
   } else if (p == PANTALLA.INICIO) {
     eMar.isPressed();
     player.isPressed();
+    local.update();
+    visitante.update();
+    
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {

@@ -5,7 +5,7 @@ color[] colors;
 
 // Estableix colors de l'App
 void setColors() {
-  this.colors = new color[7];
+  this.colors = new color[9];
   this.colors[0] = color(#072AC8);
   this.colors[1] = color(#1E96FC);
   this.colors[2] = color(#A2D6F9);
@@ -13,6 +13,8 @@ void setColors() {
   this.colors[4] = color(#FBE474);
   this.colors[5] = color(#FFF5B7);
   this.colors[6] = color(#FFFFFF);
+  this.colors[7] = color(#71A253);
+  this.colors[8] = color(#F2542D);
 }
 
 // Getter del número de colors
