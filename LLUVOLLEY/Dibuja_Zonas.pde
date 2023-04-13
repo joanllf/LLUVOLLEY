@@ -113,6 +113,7 @@ void dibujaTextoAddTeam(){
 
 void dibujaRotPre(){
   pushStyle();
+    fill(255);
     rect(width/13, height/11, 3*width/13, 3*width/13);
     rect(5*width/13, height/11, 3*width/13, 3*width/13);
     rect(9*width/13, height/11, 3*width/13, 3*width/13);

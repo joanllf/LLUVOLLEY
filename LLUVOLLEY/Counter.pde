@@ -52,10 +52,19 @@ class Counter {
 
 
     // Icona del botó
+    pushStyle();
+    textAlign(CENTER);
     fill(getColorAt(7));
     rect(this.x, this.y + this.h + 15, 140, 50);
+    fill(0);
+    textSize(36);
+    text("+1", this.x + 70, this.y + this.h + 15 + 38);
     fill(getColorAt(8));
     rect(this.x + this.w - 140, this.y + this.h + 15, 140, 50);
+    fill(0);
+    textSize(36);
+    text("-1", this.x + this.w - 70, this.y + this.h + 15 + 38);
+    popStyle();
   }
 
   boolean mouseOverButtons() {
