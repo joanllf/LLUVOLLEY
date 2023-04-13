@@ -104,7 +104,8 @@ void mousePressed() {
     eMar.isPressed();
     player.isPressed();
 
-    if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2) || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
+    if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2) 
+     || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
       local.resetCounter();
       visitante.resetCounter();
     } else {
