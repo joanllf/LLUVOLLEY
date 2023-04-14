@@ -28,18 +28,18 @@ class Counter {
     this.minValue = minValue;
     this.maxValue = maxValue;
   }
-  
-  int getValue(){
+
+  int getValue() {
     return this.value;
   }
-  
-  void resetCounter(){
+
+  void resetCounter() {
     this.value = 0;
   }
 
   // Dibuixa el botó
   void display() {
-    
+
     strokeWeight(1);
     fill(getColorAt(3));                            // Color
     rect(this.x, this.y, this.w, this.h);   // Rectangle del botó
@@ -56,6 +56,7 @@ class Counter {
     pushStyle();
     textAlign(CENTER);
     fill(getColorAt(7));
+    strokeWeight(1);
     rect(this.x, this.y + this.h + 15, 140, 50);
     fill(0);
     textSize(36);

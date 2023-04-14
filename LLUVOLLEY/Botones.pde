@@ -9,8 +9,11 @@ CheckBox cl1, cl2, cl3, cl4, cl5, cl6,
          cv1, cv2, cv3, cv4, cv5, cv6, 
          tl1, tl2, 
          tv1, tv2;
+Pizarra pista;
 
 void setButtonsInicio() {
+  pista = new Pizarra(marginH, marginV, pistaW, pistaH);
+  
   // Botones bajo la pista
   sRot   = new Button("+ ROTACIÓN", marginH, 2 * marginV + pistaH, rotW, rotH);
   rRot   = new Button("- ROTACIÓN", marginH, 3 * marginV + pistaH + rotH, rotW, rotH);
@@ -108,6 +111,8 @@ void displayButtonsInicio() {
   tl2.display();
   tv1.display();
   tv2.display();
+  
+  pista.displayPins();
 }
 
 // Botones de la pantalla de Lon In

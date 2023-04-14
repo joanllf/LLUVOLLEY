@@ -14,6 +14,7 @@ void setup() {
   setMedias();
   setColors();
   setFonts();
+  setPinzel();
   setButtonsInicio();
   setButtonsLogIn();
   setButtonsSingIn();
@@ -51,9 +52,9 @@ void draw() {
     break;
   case INICIO:
     displayFondo(0, 0, width, height);
-    dibujaInicio();
-    mousePressed();
-    pintar();
+    dibujaPizarra();
+   // dibujaInicio();
+
     break;
   case JUGADORES:
     displayFondo(0, 0, width, height);

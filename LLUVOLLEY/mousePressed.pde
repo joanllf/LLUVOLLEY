@@ -103,12 +103,6 @@ void mousePressed() {
   } else if (p == PANTALLA.INICIO) {
     eMar.isPressed();
     player.isPressed();
-    
-    if (mousePressed == true){
-      drawing = true;
-    } else if (mousePressed == false){
-      drawing = false;
-    }
 
     if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2)
       || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
@@ -117,6 +111,12 @@ void mousePressed() {
     } else {
       local.update();
       visitante.update();
+    }
+    
+    if (bor.mouseOverButton()){
+      pista.resetPinPositions();
+    } else if (dib.mouseOverButton()){
+      pizarraEnabled = !pizarraEnabled;
     }
 
     if (cl1.onMouseOver()) {
@@ -152,7 +152,7 @@ void mousePressed() {
     } else if (tv2.onMouseOver()) {
       tv2.toggle();
     }
-      
+
     if (jug.mouseOverButton()) {
       p = PANTALLA.JUGADORES;
     } else if (logo.mouseOverButton()) {

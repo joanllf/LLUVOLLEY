@@ -52,7 +52,6 @@ void dibujaChange() {
 }
 
 void dibujaInicio() {
-  dibujaPista();
   dibujaMarcador();
   displayButtonsInicio();
   dibujaFletchas();

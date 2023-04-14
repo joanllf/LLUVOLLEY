@@ -1,28 +1,4 @@
-void dibujaPista() {
-  pushStyle();
-  strokeWeight(2);
-  fill(getColorAt(3));
-  rect(marginH, marginV, pistaW, pistaH);
-  pushMatrix();
-  translate(marginH, marginV);
-  strokeWeight(3);
-  line(0, 600, 900, 600);
-  line(300, 0, 300, 900);
-  line(600, 0, 600, 900);
-  popMatrix();
-  popStyle();
 
-  pushStyle();
-  textSize(48);
-  fill(getColorAt(5), 200);
-  text("1", 30, 70);
-  text("6", 330, 70);
-  text("5", 630, 70);
-  text("2", 30, 670);
-  text("3", 330, 670);
-  text("4", 630, 670);
-  popStyle();
-}
 
 void dibujaMarcador() {
   pushStyle();
@@ -50,18 +26,18 @@ void dibujaEqMarcador() {
   text("C", 1305, 392);
   text("C", 1305, 455);
   text("C", 1305, 518);
-  
+
   text("C", 1535, 203);
   text("C", 1535, 266);
   text("C", 1535, 329);
   text("C", 1535, 392);
   text("C", 1535, 455);
   text("C", 1535, 518);
-  
+
   fill(getColorAt(5));
   text("T", 1375, 203);
   text("T", 1375, 266);
-  
+
   text("T", 1465, 203);
   text("T", 1465, 266);
   popStyle();
