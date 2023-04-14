@@ -103,6 +103,12 @@ void mousePressed() {
   } else if (p == PANTALLA.INICIO) {
     eMar.isPressed();
     player.isPressed();
+    
+    if (mousePressed == true){
+      drawing = true;
+    } else if (mousePressed == false){
+      drawing = false;
+    }
 
     if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2)
       || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {

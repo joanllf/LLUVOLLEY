@@ -52,6 +52,8 @@ void draw() {
   case INICIO:
     displayFondo(0, 0, width, height);
     dibujaInicio();
+    mousePressed();
+    pintar();
     break;
   case JUGADORES:
     displayFondo(0, 0, width, height);
