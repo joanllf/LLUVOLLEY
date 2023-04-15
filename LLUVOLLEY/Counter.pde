@@ -4,7 +4,7 @@ class Counter {
 
   // Valor del comptador
   int value = 0;
-  int minValue = 0, maxValue = 50;
+  int minValue = 0, maxValue = 150;
   int stepValue = 1;
 
   // Propietats d'un counter:

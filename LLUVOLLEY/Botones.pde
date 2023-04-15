@@ -6,19 +6,19 @@ TextField eMar, player;
 ImageButton logo;
 Counter local, visitante;
 CheckBox cl1, cl2, cl3, cl4, cl5, cl6,
-         cv1, cv2, cv3, cv4, cv5, cv6, 
-         tl1, tl2, 
-         tv1, tv2;
+  cv1, cv2, cv3, cv4, cv5, cv6,
+  tl1, tl2,
+  tv1, tv2;
 Pizarra pista;
 
 void setButtonsInicio() {
   pista = new Pizarra(marginH, marginV, pistaW, pistaH);
-  
+
   // Botones bajo la pista
   sRot   = new Button("+ ROTACIÓN", marginH, 2 * marginV + pistaH, rotW, rotH);
   rRot   = new Button("- ROTACIÓN", marginH, 3 * marginV + pistaH + rotH, rotW, rotH);
-  dib    = new Button("DIBUJAR", 2 * marginH + rotW, 2 * marginV + pistaH, rotW, rotH);
-  bor    = new Button("BORRAR", 2 * marginH + rotW, 3 * marginV + pistaH + rotH, rotW, rotH);
+  dib    = new Button("DIBUJAR / BORRAR", 2 * marginH + rotW, 2 * marginV + pistaH, rotW, rotH);
+  bor    = new Button("RESET PINS", 2 * marginH + rotW, 3 * marginV + pistaH + rotH, rotW, rotH);
 
   // Botones bajo el marcador
   jug    = new Button("JUGADORES", 2 * marginH + pistaW, 4 * marginV + logoH + marcadorH + 70, menW, menH);
@@ -27,24 +27,24 @@ void setButtonsInicio() {
 
   local  = new Counter(960, 160, 300, 300);
   visitante = new Counter(1580, 160, 300, 300);
-  
+
   cl1 = new CheckBox(1280, 160, 50);
   cl2 = new CheckBox(1280, 223, 50);
   cl3 = new CheckBox(1280, 286, 50);
   cl4 = new CheckBox(1280, 349, 50);
   cl5 = new CheckBox(1280, 412, 50);
   cl6 = new CheckBox(1280, 475, 50);
-  
+
   cv1 = new CheckBox(1510, 160, 50);
   cv2 = new CheckBox(1510, 223, 50);
   cv3 = new CheckBox(1510, 286, 50);
   cv4 = new CheckBox(1510, 349, 50);
   cv5 = new CheckBox(1510, 412, 50);
   cv6 = new CheckBox(1510, 475, 50);
-  
+
   tl1 = new CheckBox(1350, 160, 50);
   tl2 = new CheckBox(1350, 223, 50);
-  
+
   tv1 = new CheckBox(1440, 160, 50);
   tv2 = new CheckBox(1440, 223, 50);
 
@@ -111,7 +111,7 @@ void displayButtonsInicio() {
   tl2.display();
   tv1.display();
   tv2.display();
-  
+  pista.display();
   pista.displayPins();
 }
 
@@ -166,7 +166,7 @@ void displayButtonsSingIn() {
 TextField userCP, newPSW, confPSW;
 Button confC;
 
-void setButtonsChange(){
+void setButtonsChange() {
   userCP = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   newPSW = new TextField(width/2 - 190, height/2 + 80, 380, 30);
   confPSW = new TextField(width/2 - 190, height/2 + 150, 380, 30);

@@ -106,17 +106,15 @@ void mousePressed() {
 
     if ((local.getValue() >= 25 && local.getValue() >= visitante.getValue() + 2)
       || (visitante.getValue() >= 25 && visitante.getValue() >= local.getValue() + 2)) {
-      local.resetCounter();
-      visitante.resetCounter();
     } else {
       local.update();
       visitante.update();
     }
-    
-    if (bor.mouseOverButton()){
+
+    if (bor.mouseOverButton()) {
       pista.resetPinPositions();
-    } else if (dib.mouseOverButton()){
-      pizarraEnabled = !pizarraEnabled;
+    } else if (dib.mouseOverButton() && dib.enabled) {
+      drawing = !drawing;
     }
 
     if (cl1.onMouseOver()) {

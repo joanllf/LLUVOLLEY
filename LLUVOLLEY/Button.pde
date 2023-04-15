@@ -47,6 +47,10 @@ class Button {
     this.textS = t;
   }
 
+  void setText(String s) {
+    this.textBoto = s;
+  }
+
   // Dibuixa el botó
   void display() {
     pushStyle();

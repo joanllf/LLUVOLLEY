@@ -51,10 +51,10 @@ void draw() {
     dibujaAddTeam();
     break;
   case INICIO:
-    displayFondo(0, 0, width, height);
-    dibujaPizarra();
-   // dibujaInicio();
-
+    if (!drawing) {
+      displayFondo(0, 0, width, height);
+      dibujaInicio();
+    }
     break;
   case JUGADORES:
     displayFondo(0, 0, width, height);

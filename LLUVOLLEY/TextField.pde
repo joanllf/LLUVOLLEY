@@ -81,10 +81,10 @@ class TextField {
       }
     }
   }
-   
-    void removeAllText(){
-     this.text = "";
-   }
+
+  void removeAllText() {
+    this.text = "";
+  }
 
   // Afegeix la lletra c al final del text
   void addText(char c) {
@@ -121,12 +121,12 @@ class TextField {
       selected = false;
     }
   }
-  
-  String getValue(){
-     return this.text;
-   }
-   
-   void reset(){
-     this.text ="";
-   }
+
+  String getValue() {
+    return this.text;
+  }
+
+  void reset() {
+    this.text ="";
+  }
 }

@@ -4,7 +4,7 @@ class CheckBox {
 
   // Propietats
   int x, y, w;
-  
+
   color colorFill = getColorAt(1);
 
   boolean checked;
@@ -17,7 +17,7 @@ class CheckBox {
     this.checked = false;
   }
 
-  void setColorCheck(color c){
+  void setColorCheck(color c) {
     this.colorFill = c;
   }
 

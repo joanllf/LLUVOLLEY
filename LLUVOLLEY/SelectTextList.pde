@@ -18,9 +18,9 @@ class SelectTextList {
     this.texts = texts;
     this.selectedId = "";
     this.selectedValue = "";
-    this.x = x; 
+    this.x = x;
     this.y = y;
-    this.w = w; 
+    this.w = w;
     this.h = h;
     this.enabled = true;
 

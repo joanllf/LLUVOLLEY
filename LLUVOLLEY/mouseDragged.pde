@@ -1,7 +1,7 @@
-void mouseDragged(){
+void mouseDragged() {
   pista.checkPinsMotion();
-  
-  if(p == PANTALLA.INICIO){
+
+  if (drawing && pista.mouseOver()) {
     pintar();
-  }
+  } 
 }
