@@ -1,9 +1,9 @@
 // Pestaña con la información de los colores de la App
 
-// Array de colors
+// Array de colores
 color[] colors;
 
-// Estableix colors de l'App
+// Establece los colores de la App
 void setColors() {
   this.colors = new color[9];
   this.colors[0] = color(#072AC8);
@@ -17,48 +17,12 @@ void setColors() {
   this.colors[8] = color(#F2542D);
 }
 
-// Getter del número de colors
+// Getter del número de colores
 int getNumColors() {
   return this.colors.length;
 }
 
-// Getter del color primari
-color getFirstColor() {
-  return  this.colors[0];
-}
-
-// Getter del color secundari
-color getSecondColor() {
-  return  this.colors[1];
-}
-
-// Getter del color terciari
-color getThirdColor() {
-  return  this.colors[2];
-}
-
-// Getter del color i-èssim
+// Getter del color i-éssimo
 color getColorAt(int i) {
   return this.colors[i];
-}
-
-
-// Dibuixa paleta de colors
-void displayColors(float x, float y, float w) {
-  pushStyle();
-  //Llegenda
-  fill(0);
-  textAlign(LEFT);
-  textSize(36);
-  text("Colors:", x, y-10);
-
-  // Paleta de colors
-  float wc = w / getNumColors();
-  for (int i=0; i<getNumColors(); i++) {
-    fill(getColorAt(i));
-    stroke(0);
-    strokeWeight(3);
-    rect(x + i*wc, y, wc, wc);
-  }
-  popStyle();
 }

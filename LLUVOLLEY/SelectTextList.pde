@@ -1,20 +1,22 @@
+//Clase SelectTextList
+
 class SelectTextList {
 
-  float x, y, w, h;          // Posició i dimensions
-  String[] texts;          // Valors possibles
+  float x, y, w, h;          // Posición y dimensiones
+  String[] texts;            // Valores posibles
 
-  TextField textField;       // Camp de text
+  TextField textField;       // Campo de texto
 
-  String selectedId;         // Id Seleccionat
-  String selectedValue;      // Valor Seleccionat
+  String selectedId;         // Id Selecionado
+  String selectedValue;      // Valor Selecionado
 
-  boolean enabled;           // Abilitat / desabilitat
+  boolean enabled;           // Habilitado / deshabilitado
 
   int numMatchs = 0;
   ArrayList<Option> options;
 
+  //Constructor
   SelectTextList(String[] texts, float x, float y, float w, float h) {
-
     this.texts = texts;
     this.selectedId = "";
     this.selectedValue = "";
@@ -28,6 +30,7 @@ class SelectTextList {
     this.options = new ArrayList<Option>();
   }
 
+  //Dibuja SelectTextList
   void display() {
     pushStyle();
     textField.display();
@@ -39,7 +42,6 @@ class SelectTextList {
   }
 
   void update() {
-
     String searchFor = this.textField.text;
 
     this.numMatchs = 0;
@@ -70,6 +72,10 @@ class SelectTextList {
     } else {
       options.clear();
     }
+  }
+
+  void reset() {
+    this.textField.reset();
   }
 
   boolean mouseOverButtons() {
@@ -103,7 +109,7 @@ class SelectTextList {
 
 
   void mouseOn() {
-    // Pitjam damunt el textList
+    // Pulsamos sobre el textList
     this.textField.isPressed();
     this.buttonPressed();
 

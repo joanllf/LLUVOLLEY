@@ -1,6 +1,6 @@
-// Diferentes tipos de botones
+//Diferentes tipos de botones
 
-// Botones de la pantalla inicial
+//Botones de la pantalla inicial
 Button sRot, rRot, dib, bor, jug, rotPre, est, resetMarcador;
 TextField eMar, player;
 ImageButton logo;
@@ -11,24 +11,25 @@ CheckBox cl1, cl2, cl3, cl4, cl5, cl6,
   tv1, tv2;
 Pizarra pista;
 
+//Función que crea los botones de la pantalla inicio
 void setButtonsInicio() {
   pista = new Pizarra(marginH, marginV, pistaW, pistaH);
 
-  // Botones bajo la pista
+  //Botones bajo la pista
   sRot   = new Button("+ ROTACIÓN", marginH, 2 * marginV + pistaH, rotW, rotH);
   rRot   = new Button("- ROTACIÓN", marginH, 3 * marginV + pistaH + rotH, rotW, rotH);
   dib    = new Button("DIBUJAR / BORRAR", 2 * marginH + rotW, 2 * marginV + pistaH, rotW, rotH);
   bor    = new Button("RESET PINS", 2 * marginH + rotW, 3 * marginV + pistaH + rotH, rotW, rotH);
 
-  // Botones bajo el marcador
+  //Botones bajo el marcador
   jug    = new Button("JUGADORES", 2 * marginH + pistaW, 4 * marginV + logoH + marcadorH + 70, menW, menH);
   rotPre = new Button("ROTACIONES PREDEFINIDAS", 2 * marginH + pistaW, 5 * marginV + logoH + marcadorH + 70 + menH, menW, menH);
   est    = new Button("ESTADÍSTICAS", 2 * marginH + pistaW, 6 * marginV + logoH + marcadorH + 70 + 2 * menH, menW, menH);
-  
-  resetMarcador = new Button("RESET", 1370, 400, 100, 100);
 
+  //Botones del marcador
   local  = new Counter(960, 160, 300, 300);
   visitante = new Counter(1580, 160, 300, 300);
+  resetMarcador = new Button("RESET", 1370, 400, 100, 100);
 
   cl1 = new CheckBox(1280, 160, 50);
   cl2 = new CheckBox(1280, 223, 50);
@@ -58,19 +59,21 @@ void setButtonsInicio() {
   rotPre.setColorOver(getColorAt(2));
   est.setColorOver(getColorAt(2));
 
-  // Campo de texto de entrada para el marcador
+  //Campo de texto de entrada para el marcador y estadísticas
   eMar = new TextField(2 * marginH + pistaW + 130, 3 * marginV + logoH + marcadorH + 5, textFW, textFH);
 
-  // Selector de jugador de la pista
+  //Indicador de falta de rotación
   player = new TextField(2 * marginH + 2 * rotW + 135, marginV + pistaH + 55, 50, 50);
+
+  //Botón del logo
   logo = new ImageButton(getImgAt(0), width - logoH - marginH, marginV, logoW, logoH);
 }
 
+//Función que dibuja los botones de la pantalla inicial
 void displayButtonsInicio() {
   eMar.changeY(40);
   player.changeY(35);
   player.changeX(15);
-
   sRot.display();
   rRot.display();
   dib.display();
@@ -118,10 +121,11 @@ void displayButtonsInicio() {
   resetMarcador.display();
 }
 
-// Botones de la pantalla de Lon In
+//Botones de la pantalla de Log In
 TextField usuario, pasw;
 Button creaC, cambC, logIn;
 
+//Función que crea los botones de la pantalla Log In
 void setButtonsLogIn() {
   usuario = new TextField(width/2 - 190, height/2 + 20, 380, 40);
   pasw = new TextField(width/2 - 190, height/2 + 110, 380, 40);
@@ -131,6 +135,7 @@ void setButtonsLogIn() {
   logIn = new Button("Log In", width/2 -100, height/2 + 235, 200, 50);
 }
 
+//Función que dibuja los botones de la pantalla Log In
 void displayButtonsLogIn() {
   usuario.display();
   pasw.display();
@@ -145,6 +150,7 @@ void displayButtonsLogIn() {
 TextField userR, paswR, repPasw;
 Button cont;
 
+//Función que crea los botones de la pantalla Sing In
 void setButtonsSingIn() {
   userR = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   paswR = new TextField(width/2 - 190, height/2 + 80, 380, 30);
@@ -153,6 +159,7 @@ void setButtonsSingIn() {
   cont = new Button("Continuar", width/2 + 10, height/2 + 210, 180, 50);
 }
 
+//Función que dibuja los botones de la pantalla Sing In
 void displayButtonsSingIn() {
   userR.changeY(23);
   paswR.changeY(23);
@@ -169,6 +176,7 @@ void displayButtonsSingIn() {
 TextField userCP, newPSW, confPSW;
 Button confC;
 
+//Función que crea los botones de la pantalla Change Pasword
 void setButtonsChange() {
   userCP = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   newPSW = new TextField(width/2 - 190, height/2 + 80, 380, 30);
@@ -176,6 +184,7 @@ void setButtonsChange() {
   confC = new Button("Confirmar", width/2 + 10, height/2 + 210, 180, 50);
 }
 
+//Función que dibuja los botones de la pantalla Change Pasword
 void displayButtonsChange() {
   userCP.changeY(23);
   newPSW.changeY(23);
@@ -190,15 +199,16 @@ void displayButtonsChange() {
 
 // Botones de la pantalla de select team
 SelectTextList equipo;
-
 Button addTeam, confST;
 
+//Función que crea los botones de la pantalla Select Team
 void setButtonsSelectTeam() {
   equipo = new SelectTextList(getInfoTaulaCategoria(), width/2 - 300, height/2 - 25, 600, 80);
   addTeam = new Button("Añadir categoría", width/2 - 300, height/2 + 70, 200, 70);
   confST = new Button("Confirmar", width/2 + 100, height/2 + 70, 200, 70);
 }
 
+//Función que dibuja los botones de la pantalla Select Team
 void displayButtonsSelectTeam() {
   addTeam.setColor(getColorAt(4));
   addTeam.setColorOver(getColorAt(5));
@@ -212,6 +222,7 @@ void displayButtonsSelectTeam() {
 TextField userT, paswT, categ;
 Button conf;
 
+//Función que crea los botones de la pantalla Add Team
 void setButtonsAddTeam() {
   userT = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   paswT = new TextField(width/2 - 190, height/2 + 80, 380, 30);
@@ -219,6 +230,7 @@ void setButtonsAddTeam() {
   conf = new Button("Confirmar", width/2 + 10, height/2 + 210, 180, 50);
 }
 
+//Función que dibuja los botones de la pantalla Add Team
 void displayButtonsAddTeam() {
   userT.changeY(23);
   paswT.changeY(23);
@@ -237,6 +249,7 @@ int row = 8, column = 5;
 String[] headers = {"Nombre", "Dorsal", "Posición", "Altura", "Edad"};
 float [] colWidths = {31, 16, 21, 16, 16};
 
+//Función que crea los botones de la pantalla Jugadores
 void setButtonsJugadores() {
   t = new PagedTable(row, column);
   t.setHeaders(headers);
@@ -248,18 +261,20 @@ void setButtonsJugadores() {
   add = new Button("ADD", width/2 + 600, 980, 100, 50);
 }
 
+//Función que dibuja los botones de la pantalla Jugadores
 void displayButtonsJugadores() {
   t.display(210, 140, 1500, 800);
   next.display();
   prev.display();
   add.display();
-  updateCursor();
   logo.display();
 }
 
+//Botones de la pantalla Add Player
 TextField nombre, dorsal, posicion, altura, edad;
 Button contA;
 
+//Función que crea los botones de la pantalla Add Player
 void setButtonsAddPlayer() {
   nombre = new TextField(width/2 - 190, height/2 + 10, 380, 30);
   dorsal = new TextField(width/2 - 190, height/2 + 80, 380, 30);
@@ -270,6 +285,7 @@ void setButtonsAddPlayer() {
   contA = new Button("Continuar", width/2 -100, height/2 + 335, 200, 50);
 }
 
+//Función que dibuja los botones de la pantalla Add Player
 void displayButtonsAddPlayer() {
   nombre.changeY(23);
   dorsal.changeY(23);
@@ -285,18 +301,21 @@ void displayButtonsAddPlayer() {
   contA.display();
 }
 
-
+//Botones de la pantalla Rotaciones
 void displayButtonsRotaciones() {
   logo.display();
 }
 
+//Botones de la pantalla Estadísticas
 Button glob, part;
 
+//Función que crea los botones de la pantalla Estadísticas
 void setButtonsEstI() {
   glob = new Button("Estadíscas \n" + "globales", width/5, height/5, width/5, 3*height/5);
   part = new Button("Estadíscas \n" + "último partido", 3*width/5, height/5, width/5, 3*height/5);
 }
 
+//Función que dibuja los botones de la pantalla Estadísticas
 void displayButtonsEstI() {
   glob.setTextSize(32);
   part.setTextSize(32);
@@ -305,10 +324,12 @@ void displayButtonsEstI() {
   logo.display();
 }
 
+//Botones de la pantalla estadísticas Globales
 void displayButtonsEstG() {
   logo.display();
 }
 
+//Botones de la pantalla estadísticas Partido
 void displayButtonsEstP() {
   logo.display();
 }

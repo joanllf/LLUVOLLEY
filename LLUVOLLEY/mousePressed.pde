@@ -1,3 +1,5 @@
+//Pestaña que escucha el cursor
+
 void mousePressed() {
 
   //LOGIN
@@ -7,10 +9,15 @@ void mousePressed() {
 
     if (creaC.mouseOverButton()) {
       p = PANTALLA.SINGIN;
+      usuario.reset();
+      pasw.reset();
     } else if (logIn.mouseOverButton()) {
       p = PANTALLA.SELECTTEAM;
+      usuario.reset();
+      pasw.reset();
     } else if (cambC.mouseOverButton()) {
       p = PANTALLA.CHANGEPASW;
+      pasw.reset();
     }
 
     //SINGIN
@@ -73,10 +80,13 @@ void mousePressed() {
 
     if (addTeam.mouseOverButton()) {
       p = PANTALLA.ADDTEAM;
+      equipo.reset();
     } else if (confST.mouseOverButton() && confST.enabled) {
       p = PANTALLA.INICIO;
+      equipo.reset();
     } else if (logo.mouseOverButton()) {
       p = PANTALLA.LOGIN;
+      equipo.reset();
     }
 
     //ADDTEAM
@@ -121,17 +131,17 @@ void mousePressed() {
       cl4.setChecked(false);
       cl5.setChecked(false);
       cl6.setChecked(false);
-      
+
       cv1.setChecked(false);
       cv2.setChecked(false);
       cv3.setChecked(false);
       cv4.setChecked(false);
       cv5.setChecked(false);
       cv6.setChecked(false);
-      
+
       tl1.setChecked(false);
       tl2.setChecked(false);
-      
+
       tv1.setChecked(false);
       tv2.setChecked(false);
     }

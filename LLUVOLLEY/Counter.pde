@@ -1,16 +1,16 @@
-// Classe Counter
+// Clase Counter
 
 class Counter {
 
-  // Valor del comptador
+  // Valor del contador
   int value = 0;
   int minValue = 0, maxValue = 150;
   int stepValue = 1;
 
-  // Propietats d'un counter:
-  float x, y, w, h;  // Posició i dimensions
+  // Propiedades de un counter:
+  float x, y, w, h;  // Posición y dimensiones
 
-  // Mètode Constructor
+  // Constructor
   Counter(float x, float y, float w, float h) {
     this.x = x;
     this.y = y;
@@ -19,7 +19,6 @@ class Counter {
   }
 
   // Setters
-
   void setInitialValue(int n) {
     this.value = n;
   }
@@ -29,20 +28,20 @@ class Counter {
     this.maxValue = maxValue;
   }
 
+  void resetCounter() {
+    this.value = 0;
+  }
+  //Getter del valor
   int getValue() {
     return this.value;
   }
 
-  void resetCounter() {
-    this.value = 0;
-  }
-
-  // Dibuixa el botó
+  // Dibuja el counter
   void display() {
 
     strokeWeight(1);
     fill(getColorAt(3));                            // Color
-    rect(this.x, this.y, this.w, this.h);   // Rectangle del botó
+    rect(this.x, this.y, this.w, this.h);   // Rectangulo del botón
 
     pushStyle();
     textAlign(CENTER);
@@ -52,7 +51,7 @@ class Counter {
     popStyle();
 
 
-    // Icona del botó
+    // Icona del botón
     pushStyle();
     textAlign(CENTER);
     fill(getColorAt(7));
@@ -73,13 +72,13 @@ class Counter {
     return mouseOverButtonMes() || mouseOverButtonMenys();
   }
 
-  // Indica si el cursor està sobre el botó Més
+  // Indica si el cursor esta sobre el botón Más
   boolean mouseOverButtonMes() {
     return mouseX >= this.x && mouseX <= this.x + 140 &&
       mouseY >= this.y + this.h + 15 && mouseY <= this.y + this.h + 15 + 50;
   }
 
-  // Indica si el cursor està sobre el botó Menys
+  // Indica si el cursor esta sobre el botón Menos
   boolean mouseOverButtonMenys() {
     return mouseX >= this.x + this.w - 140 && mouseX <= this.x + this.w &&
       mouseY >= this.y + this.h + 15 && mouseY <= this.y + this.h + 15 + 50;

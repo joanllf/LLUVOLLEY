@@ -1,6 +1,8 @@
+//Clase Pin
+
 class Pin {
 
-  // Propietats d'un Pin
+  // Propiedades de un Pin
   float x, y, r;
   String txt;
   color c;
@@ -16,13 +18,12 @@ class Pin {
 
 
   // Setter
-
   void setPosition(float x, float y) {
     this.x = x;
     this.y = y;
   }
 
-  // Dibuixa el Pin
+  // Dibuja el Pin
   void display() {
     pushStyle();
     stroke(0);
@@ -36,7 +37,7 @@ class Pin {
     popStyle();
   }
 
-  // Indica si el cursor està sobre el Pin
+  // Indica si el cursor esta sobre el Pin
   boolean mouseOver() {
     return dist(mouseX, mouseY, this.x, this.y)<=this.r;
   }

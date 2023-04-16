@@ -2,19 +2,19 @@ enum PANTALLA {
   LOGIN, SINGIN, CHANGEPASW, SELECTTEAM, ADDTEAM, INICIO, JUGADORES, ADDJUGADOR, ROTACIONES, ESTINICIO, ESTGLOBALES, ESTPARTIDO
 };
 
-//PANTALLA p = PANTALLA.LOGIN;
-//PANTALLA p = PANTALLA.ESTINICIO;
-//PANTALLA p = PANTALLA.JUGADORES;
-PANTALLA p = PANTALLA.INICIO;
-
+PANTALLA p = PANTALLA.LOGIN;
 
 void setup() {
   fullScreen();
   conexionBBDD();
+
+  // Inicializar los diferentes elementos de la GUI (colores, media, fuentes...)
   setMedias();
   setColors();
   setFonts();
   setPinzel();
+
+  // Inicializar los botones de las diferentes pantallas
   setButtonsInicio();
   setButtonsLogIn();
   setButtonsSingIn();
@@ -29,6 +29,7 @@ void setup() {
 }
 
 void draw() {
+  //Las diferentes pantallas de la App
   switch(p) {
   case LOGIN:
     displayFondo(0, 0, width, height);
@@ -79,14 +80,5 @@ void draw() {
     displayFondo(0, 0, width, height);
     displayButtonsEstP();
     break;
-  }
-}
-
-void updateCursor() {
-  if ((prev.mouseOverButton() && prev.enabled)||
-    (next.mouseOverButton() && next.enabled)) {
-    cursor(HAND);
-  } else {
-    cursor(ARROW);
   }
 }

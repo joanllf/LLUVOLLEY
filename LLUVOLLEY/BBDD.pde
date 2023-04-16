@@ -1,3 +1,5 @@
+//Pestaña para establecer la conexión con la base de datos
+
 import de.bezier.data.sql.*;
 
 MySQL msql;
@@ -11,14 +13,15 @@ void conexionBBDD() {
   msql = new MySQL(this, "localhost", database, user, pass);
 
   if (msql.connect()) {
-    // La connexió s'ha establert correctament
+    // La connexión se ha establecido correctamente
     println("Connexió establerta :)");
   } else {
-    // La connexió ha fallat!!!
+    // La connexión ha fallado
     println("Error de Connexió :(");
   }
 }
 
+//Diferentes acciones que realiza la App y que afectan a la BBDD
 void insertCategoria(String nom) {
   String sNom = nom.replace("\'", "\\'");
   String q = "INSERT INTO `categoría` (`idcategoría`, `nomcategoria`) VALUES (NULL, '"+sNom+"')";

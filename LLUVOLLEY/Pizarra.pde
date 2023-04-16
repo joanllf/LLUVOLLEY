@@ -1,9 +1,11 @@
+//Clase Pizarra
+
 class Pizarra {
 
-  // Propietats de la Pissarra
+  // Propiedades de la Pizarra
   float x, y, w, h;
 
-  // Col·leccions de Pins
+  // Colecciones de Pins
   Pin[] pins1;
 
   // Constructor
@@ -13,7 +15,7 @@ class Pizarra {
     this.w = w;
     this.h = h;
 
-    // Crea 5 pins (Equip 1)
+    // Crear 6 pins (equipo de volley)
     pins1 = new Pin[6];
     for (int i=0; i<pins1.length; i++) {
       String txt = (i+1)+"";
@@ -25,7 +27,7 @@ class Pizarra {
     }
   }
 
-  // Resetea la posició de tots els Pins
+  // Resetea la posición de tots els Pins
   void resetPinPositions() {
     for (int i=0; i<pins1.length; i++) {
       String txt = (i+1)+"";
@@ -37,11 +39,11 @@ class Pizarra {
     }
   }
 
-  // Dibuixa la Pissarra
+  // Dibuja la Pizarra
   void display() {
     pushStyle();
 
-    // Rectangle
+    // Rectangulo
     stroke(0);
     strokeWeight(3);
     fill(getColorAt(3));
@@ -77,24 +79,24 @@ class Pizarra {
     popStyle();
   }
 
-  // Dibuixa els Pins
+  // Dibuja els Pins
   void displayPins() {
     for (Pin p : pins1) {
       p.display();
     }
   }
 
-  // Comprova si el cursor està sobre la Pissarra
+  // Comprova si el cursor esta sobre la Pizarra
   boolean mouseOver() {
     return mouseX >= this.x && mouseX <= this.x + this.w &&
       mouseY >= this.y && mouseY <= this.y + this.h;
   }
 
-  // Comprova si cal moure algun Pin
+  // Comprova si se ha de mover algun Pin
   void checkPinsMotion() {
     if (mouseOver()) {
 
-      // Comprova els pins de l'Equip 1
+      // Comprueba los pines del Equipo
       for (Pin p : pins1) {
         if (p.mouseOver()) {
           p.setPosition(mouseX, mouseY);

@@ -1,13 +1,13 @@
-// Component Camp de Text
+// Componentes Campo de Texto
 
 class TextField {
 
-  // Propietats del camp de text
+  // Propiedades del campo de texto
   float x, y, h, w;
   float startX = 20,
     startY = 30;
 
-  // Colors
+  // Colores
   color bgColor = getColorAt(4);
   color fgColor = color(0, 0, 0);
   color selectedColor = getColorAt(5);
@@ -15,7 +15,7 @@ class TextField {
   color borderColor = color(0);
   int borderWeight = 1;
 
-  // Text del camp
+  // Texto del campo
   String text = "";
   int textLength = 0;
   int textSize = 24;
@@ -30,7 +30,7 @@ class TextField {
     this.h = h;
   }
 
-  // Dibuixa el Camp de Text
+  // Dibuja el Campo de Texto
   void display() {
     pushStyle();
     if (selected) {
@@ -49,6 +49,7 @@ class TextField {
     popStyle();
   }
 
+  //Setters
   void changeX(float x) {
     this.startX = x;
   }
@@ -61,7 +62,7 @@ class TextField {
     this.textSize = t;
   }
 
-  // Afegeix, lleva el text que es tecleja
+  // Añade, elimina el texto que se teclea
   void keyPressed(char key, int keyCode) {
     if (selected) {
       if (keyCode == (int)BACKSPACE) {
@@ -86,7 +87,7 @@ class TextField {
     this.text = "";
   }
 
-  // Afegeix la lletra c al final del text
+  // Añade la letra c al final del texto
   void addText(char c) {
     if (textWidth(this.text + c) < 2*w) {
       this.text += c;
@@ -94,7 +95,7 @@ class TextField {
     }
   }
 
-  // Lleva la darrera lletra del text
+  // Elimina la última letra del texto
   void removeText() {
     if (textLength - 1 >= 0) {
       text = text.substring(0, textLength - 1);
@@ -102,7 +103,7 @@ class TextField {
     }
   }
 
-  // Indica si el ratolí està sobre el camp de text
+  // Indica si el cursor esta sobre el campo de texto
   boolean mouseOverTextField() {
     if (mouseX >= this.x && mouseX <= this.x + this.w) {
       if (mouseY >= this.y && mouseY <= this.y + this.h) {
@@ -112,8 +113,8 @@ class TextField {
     return false;
   }
 
-  // Selecciona el camp de text si pitjam a sobre
-  // Deselecciona el camp de text si pitjam a fora
+  // Seleciona el campo de texto si pulsamos encima
+  // Deseleciona el campo de texto si pulsamos a fuera
   void isPressed() {
     if (mouseOverTextField()) {
       selected = true;

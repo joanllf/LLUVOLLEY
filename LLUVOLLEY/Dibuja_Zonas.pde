@@ -1,4 +1,4 @@
-
+//Función que dibuja el fondo del marcador
 
 void dibujaMarcador() {
   pushStyle();
@@ -8,6 +8,7 @@ void dibujaMarcador() {
   popStyle();
 }
 
+//Función que dibuja el marcador
 void dibujaEqMarcador() {
   pushStyle();
   textAlign(CENTER);
@@ -43,6 +44,7 @@ void dibujaEqMarcador() {
   popStyle();
 }
 
+//Función que dibuja las flachas
 void dibujaFletchas() {
   pushMatrix();
   translate(2 * marginH + 2 * rotW + 135, marginV + pistaH + 55);
@@ -57,6 +59,7 @@ void dibujaFletchas() {
   popMatrix();
 }
 
+//Función que dibuja el texto de la pantalla Log In
 void dibujaTextoLogIn() {
   pushStyle();
   textFont(getFontAt(1));
@@ -67,6 +70,7 @@ void dibujaTextoLogIn() {
   popStyle();
 }
 
+//Función que dibuja el texto de la pantalla Sing In
 void dibujaTextoSingIn() {
   pushStyle();
   textFont(getFontAt(1));
@@ -78,6 +82,7 @@ void dibujaTextoSingIn() {
   popStyle();
 }
 
+//Función que dibuja el texto de la pantalla Add Player
 void dibujaTextoAddPlayer() {
   pushStyle();
   textFont(getFontAt(1));
@@ -91,6 +96,7 @@ void dibujaTextoAddPlayer() {
   popStyle();
 }
 
+//Función que dibuja el texto de la pantalla Change Pasword
 void dibujaTextoChange() {
   pushStyle();
   textFont(getFontAt(1));
@@ -102,6 +108,7 @@ void dibujaTextoChange() {
   popStyle();
 }
 
+//Función que dibuja el texto de la pantalla Add Team
 void dibujaTextoAddTeam() {
   pushStyle();
   textFont(getFontAt(1));
@@ -113,6 +120,7 @@ void dibujaTextoAddTeam() {
   popStyle();
 }
 
+//Función que dibuja las rotaciones predefinidas
 void dibujaRotPre() {
   pushStyle();
   fill(255);

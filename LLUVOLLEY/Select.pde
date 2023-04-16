@@ -1,16 +1,18 @@
+//Clase Select
+
 class Select {
 
-  float x, y, w, h;          // Posició i dimensions
-  String[] texts;            // Valors possibles
-  String selectedValue;      // Valor Seleccionat
+  float x, y, w, h;          // Posición y dimensiones
+  String[] texts;            // Valores posibles
+  String selectedValue;      // Valor Seleccionado
 
-  boolean collapsed = true;  // Plegat / Desplegat
-  boolean enabled;           // Abilitat / desabilitat
+  boolean collapsed = true;  // Plegado / Desplegado
+  boolean enabled;           // Habilitado / deshabilitado
 
-  float lineSpace = 5;      // Espai entre línies
+  float lineSpace = 5;      // Espacio entre línieas
 
+  //Constructor
   Select(String[] texts, float x, float y, float w, float h) {
-
     this.texts = texts;
     this.selectedValue = "";
     this.x = x;
@@ -21,6 +23,7 @@ class Select {
     this.collapsed = true;
   }
 
+  //Dibuja Select
   void display() {
     pushStyle();
     stroke(0);
@@ -58,6 +61,7 @@ class Select {
     popStyle();
   }
 
+  //Setters
   void setCollapsed(boolean b) {
     this.collapsed = b;
   }
@@ -72,7 +76,7 @@ class Select {
     selectedValue = texts[option];
   }
 
-  // Indica si el cursor està sobre el select
+  // Indica si el cursor esta sobre el select
   boolean mouseOverSelect() {
     if (this.collapsed) {
       return (mouseX >= x) &&

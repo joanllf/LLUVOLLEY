@@ -1,16 +1,16 @@
-// Classe Option
+// Clase Option
 
 class Option {
 
-  // Propietats d'un option:
-  float x, y, w, h;  // Posició i dimensions
-  // Colors de contorn, farciment, actiu i desactiu
+  // Propiedades de un option:
+  float x, y, w, h;  // Posición y dimensiones
+  // Colores de contorno, relleno, activado y desactivado
   color fillColor, strokeColor;
   color fillColorOver, fillColorDisabled;
-  String textBoto;  // Text
-  boolean enabled;  // Abilitat / desabilitat
+  String textBoto;  // Texto
+  boolean enabled;  // Habilitado / deshabilitado
 
-  // Mètode Constructor
+  //Constructor
   Option(String text, float x, float y, float w, float h) {
     this.textBoto = text;
     this.x = x;
@@ -24,26 +24,25 @@ class Option {
     strokeColor = color(0);
   }
 
-  // Setters
-
+  //Setters
   void setEnabled(boolean b) {
     this.enabled = b;
   }
 
-  // Dibuixa el botó
+  // Dibuja el botón
   void display() {
     pushStyle();
     if (!enabled) {
-      fill(fillColorDisabled);  // Color desabilitat
+      fill(fillColorDisabled);  // Color deshabilitado
     } else if (mouseOverButton()) {
-      fill(fillColorOver);      // Color quan ratolí a sobre
+      fill(fillColorOver);      // Color quando el cursor esta sobre
     } else {
-      fill(fillColor);          // Color actiu però ratolí fora
+      fill(fillColor);          // Color activo pero con el cusros fuera
     }
     noStroke();
-    rect(this.x, this.y, this.w, this.h);    // Rectangle de l'option
+    rect(this.x, this.y, this.w, this.h);    // Rectangulo del option
 
-    // Text (color, alineació i mida)
+    // Texto (color, alineación y tamaño)
     fill(0);
     textAlign(CENTER);
     textSize(34);
@@ -51,7 +50,7 @@ class Option {
     popStyle();
   }
 
-  // Indica si el cursor està sobre l'option
+  // Indica si el cursor esta sobre el option
   boolean mouseOverButton() {
     return (mouseX >= this.x) &&
       (mouseX<=this.x + this.w) &&

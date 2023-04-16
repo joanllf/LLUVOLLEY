@@ -1,14 +1,15 @@
-// Classe Botó
+// Clase Botón
+
 class ImageButton {
 
-  // Propietats d'un botó:
-  float x, y, w, h;  // Posició i dimensions
+  // Propiedades de un botón:
+  float x, y, w, h;  // Posición y dimensiones
 
-  PImage img;  // Imatges del botó
+  PImage img;  // Imagen del botón
 
-  boolean enabled;   // Abilitat / desabilitat
+  boolean enabled;   // Habilitado / deshabilitado
 
-  // Mètode Constructor
+  //Constructor
   ImageButton(PImage imgs, float x, float y, float w, float h) {
     this.img = imgs;
     this.x = x;
@@ -23,14 +24,13 @@ class ImageButton {
     this.enabled = b;
   }
 
-  // Dibuixa el botó
+  // Dibuja el botón
   void display() {
     imageMode(CORNER);
     image(img, this.x, this.y, this.w, this.h);
   }
 
-  // Indica si el cursor està sobre el botó
-  // Indica si el cursor està sobre el botó
+  // Indica si el cursor esta sobre el botón
   boolean mouseOverButton() {
     return (mouseX >= this.x) &&
       (mouseX<=this.x + this.w) &&

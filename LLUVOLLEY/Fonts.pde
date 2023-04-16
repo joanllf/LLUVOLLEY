@@ -1,44 +1,40 @@
 // Pestaña con la información de las fuentes de la App
 
-// Array de tipografies
+// Array de tipografías
 PFont[] fonts;
 
-// URL de la carpeta on hi ha les imatges
+// URL de la carpeta donde hay les fuentes
 String URL_FONT = "fonts/";
 
-// Estableix les fonts de l'App
+// Establece la fuentes de la App
 void setFonts() {
   this.fonts = new PFont[7];
-  this.fonts[0] = createFont(URL_FONT + "Montserrat-Regular.ttf", midaTitol);
-  this.fonts[1] = createFont(URL_FONT + "Montserrat-Bold.ttf", midaTitol);
-  this.fonts[2] = createFont(URL_FONT + "Hack-Regular.ttf", midaSubtitol);
-  this.fonts[3] = createFont(URL_FONT + "Hack-Bold.ttf", midaTitol);
-  this.fonts[4] = createFont(URL_FONT + "Hack-Italic.ttf", midaTitol);
-  this.fonts[5] = createFont(URL_FONT + "Hack-BoldItalic.ttf", midaTitol);
-  this.fonts[6] = createFont(URL_FONT + "BebasNeue-Regular.ttf", midaTextField); //monospace
+  this.fonts[0] = createFont(URL_FONT + "Montserrat-Regular.ttf", 60);
+  this.fonts[1] = createFont(URL_FONT + "Montserrat-Bold.ttf", 60);
+  this.fonts[2] = createFont(URL_FONT + "Hack-Regular.ttf", 54);
+  this.fonts[3] = createFont(URL_FONT + "Hack-Bold.ttf", 60);
+  this.fonts[4] = createFont(URL_FONT + "Hack-Italic.ttf", 60);
+  this.fonts[5] = createFont(URL_FONT + "Hack-BoldItalic.ttf", 60);
+  this.fonts[6] = createFont(URL_FONT + "BebasNeue-Regular.ttf", 30); //monospace
 }
 
-// Getter del número de fonts
+// Getters
 int getNumFonts() {
   return this.fonts.length;
 }
 
-// Getter de la font primaria
 PFont getFirstFont() {
   return  this.fonts[0];
 }
 
-// Getter de la fuente primaria en negrita
 PFont getFirstFontB() {
   return  this.fonts[1];
 }
 
-// Getter del font secundaria
 PFont getSecondFont() {
   return  this.fonts[2];
 }
 
-// Getters de la fuente secundaria en negrita, cursiva o ambas
 PFont getSecondFontB() {
   return  this.fonts[3];
 }
@@ -51,12 +47,10 @@ PFont getSecondFontBI() {
   return  this.fonts[5];
 }
 
-// Getter del la font terciaria
 PFont getThirdFont() {
   return  this.fonts[3];
 }
 
-// Getter de la font i-èssima
 PFont getFontAt(int i) {
   return this.fonts[i];
 }

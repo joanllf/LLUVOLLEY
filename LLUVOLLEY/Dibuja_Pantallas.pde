@@ -1,3 +1,5 @@
+//Función que dibuja la pantalla Log In
+
 void dibujaLogIn() {
   pushStyle();
   noStroke();
@@ -9,6 +11,7 @@ void dibujaLogIn() {
   dibujaTextoLogIn();
 }
 
+//Función que dibuja la pantalla Sing In
 void dibujaSingIn() {
   pushStyle();
   noStroke();
@@ -20,6 +23,7 @@ void dibujaSingIn() {
   dibujaTextoSingIn();
 }
 
+//Función que dibuja la pantalla Select Team
 void dibujaSelectTeam() {
   pushStyle();
   noStroke();
@@ -29,6 +33,7 @@ void dibujaSelectTeam() {
   displayButtonsSelectTeam();
 }
 
+//Función que dibuja la pantalla Add Team
 void dibujaAddTeam() {
   pushStyle();
   noStroke();
@@ -40,6 +45,7 @@ void dibujaAddTeam() {
   dibujaTextoAddTeam();
 }
 
+//Función que dibuja la pantalla Change Pasword
 void dibujaChange() {
   pushStyle();
   noStroke();
@@ -51,6 +57,7 @@ void dibujaChange() {
   dibujaTextoChange();
 }
 
+//Función que dibuja la pantalla Inicio
 void dibujaInicio() {
   dibujaMarcador();
   displayButtonsInicio();
@@ -58,10 +65,12 @@ void dibujaInicio() {
   dibujaEqMarcador();
 }
 
+//Función que dibuja la pantalla Jugadores
 void dibujaJugadores() {
   displayButtonsJugadores();
 }
 
+//Función que dibuja la pantalla Add Player
 void dibujaAddPlayer() {
   pushStyle();
   noStroke();
@@ -73,12 +82,13 @@ void dibujaAddPlayer() {
   dibujaTextoAddPlayer();
 }
 
-
+//Función que dibuja la pantalla Rotaciones Predefinidas
 void dibujaRotPred() {
   displayButtonsRotaciones();
   dibujaRotPre();
 }
 
+//Función que dibuja la pantalla Estadísticas
 void dibujaEstI() {
   displayButtonsEstI();
 }

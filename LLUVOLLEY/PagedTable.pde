@@ -1,10 +1,12 @@
+//Clase PagedTable
+
 class PagedTable {
 
-  String[] tableHeaders;   // Títols de les columnes
-  String[][] tableData;    // Dades de la taula
-  float[] columnWidths;    // Amplades de les columnes
+  String[] tableHeaders;   // Titulos de las columnas
+  String[][] tableData;    // Información de la tabla
+  float[] columnWidths;    // ancho de las columnas
 
-  int numCols, numRows;  // Número de files i columnes
+  int numCols, numRows;  // Número de fileras y columnas
 
   int numPage;
   int numTotalPages;
@@ -17,7 +19,6 @@ class PagedTable {
   }
 
   // Setters
-
   void setHeaders(String[] h) {
     this.tableHeaders = h;
   }
@@ -51,7 +52,7 @@ class PagedTable {
     }
   }
 
-  // Dibuixa taula
+  // Dibuja taula
   void display(float x, float y, float w, float h) {
 
     pushStyle();
@@ -67,7 +68,7 @@ class PagedTable {
     strokeWeight(3);
     rect(x, y, w, rowHeight - 30);
 
-    // Dibuixa files
+    // Dibuja filas
     stroke(0);
     for (int r = 1; r <numRows; r++) {
       if (r==1) {
@@ -78,14 +79,14 @@ class PagedTable {
       line(x, y + r*rowHeight - 30, x + w, y + r*rowHeight - 30);
     }
 
-    // Dibuixa Columnes
+    // Dibuja Columnas
     float xCol = x;
     for (int c = 0; c<numCols; c++) {
       xCol += w*columnWidths[c]/100.0;
       line(xCol, y, xCol, y + h);
     }
 
-    // Dibuixa textos
+    // Dibuja textos
     fill(0);
     textSize(24);
     for (int r = 0; r < numRows; r++) {
@@ -107,7 +108,7 @@ class PagedTable {
       }
     }
 
-    // Informació de la Pàgina
+    // Información de la Página
     fill(getColorAt(5));
     text("Pag: "+(this.numPage+1)+" / "+(this.numTotalPages+1), x, y + h + 50);
 

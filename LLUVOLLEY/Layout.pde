@@ -1,6 +1,6 @@
-// Valors de posicionament de blocs
+// Valores de posicionamento de bloques
 
-// Marges Horitzontals i Verticals
+// Margenes Horitzontales y Verticales
 float marginH = 20,
   marginV = 20;
 
