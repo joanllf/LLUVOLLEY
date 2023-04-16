@@ -111,6 +111,31 @@ void mousePressed() {
       visitante.update();
     }
 
+    if (resetMarcador.mouseOverButton()) {
+      local.resetCounter();
+      visitante.resetCounter();
+
+      cl1.setChecked(false);
+      cl2.setChecked(false);
+      cl3.setChecked(false);
+      cl4.setChecked(false);
+      cl5.setChecked(false);
+      cl6.setChecked(false);
+      
+      cv1.setChecked(false);
+      cv2.setChecked(false);
+      cv3.setChecked(false);
+      cv4.setChecked(false);
+      cv5.setChecked(false);
+      cv6.setChecked(false);
+      
+      tl1.setChecked(false);
+      tl2.setChecked(false);
+      
+      tv1.setChecked(false);
+      tv2.setChecked(false);
+    }
+
     if (bor.mouseOverButton()) {
       pista.resetPinPositions();
     } else if (dib.mouseOverButton() && dib.enabled) {

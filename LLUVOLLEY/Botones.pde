@@ -1,7 +1,7 @@
 // Diferentes tipos de botones
 
 // Botones de la pantalla inicial
-Button sRot, rRot, dib, bor, jug, rotPre, est;
+Button sRot, rRot, dib, bor, jug, rotPre, est, resetMarcador;
 TextField eMar, player;
 ImageButton logo;
 Counter local, visitante;
@@ -24,6 +24,8 @@ void setButtonsInicio() {
   jug    = new Button("JUGADORES", 2 * marginH + pistaW, 4 * marginV + logoH + marcadorH + 70, menW, menH);
   rotPre = new Button("ROTACIONES PREDEFINIDAS", 2 * marginH + pistaW, 5 * marginV + logoH + marcadorH + 70 + menH, menW, menH);
   est    = new Button("ESTADÍSTICAS", 2 * marginH + pistaW, 6 * marginV + logoH + marcadorH + 70 + 2 * menH, menW, menH);
+  
+  resetMarcador = new Button("RESET", 1370, 400, 100, 100);
 
   local  = new Counter(960, 160, 300, 300);
   visitante = new Counter(1580, 160, 300, 300);
@@ -113,6 +115,7 @@ void displayButtonsInicio() {
   tv2.display();
   pista.display();
   pista.displayPins();
+  resetMarcador.display();
 }
 
 // Botones de la pantalla de Lon In
